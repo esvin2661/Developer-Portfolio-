@@ -1,8 +1,10 @@
 function ContactPage() {
     return (
-        <button onClick = {handleClick}>
-             Contact
-        </button> 
+        <div>
+            <button onClick = {handleClick}>
+                Contact
+            </button>
+        </div>
     );
 }
 
