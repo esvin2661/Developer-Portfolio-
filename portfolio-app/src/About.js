@@ -1,7 +1,9 @@
 function AboutPage () {
     return (
-        <button onClick={handleClickk}>
-            About Me 
-        </button>
+        <div>
+            <button onClick={handleClickk}>
+                About Me 
+            </button>
+        </div>
     );
 }
