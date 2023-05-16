@@ -5,7 +5,7 @@ type MyComponentProps = {
 };
 
 const MyComponent: React.FC<MyComponentProps> = ({ name }) => {
-  return <div>Hello, {name}!</div>;
+  return <div>Projects {name}!</div>;
 };
 
 export default MyComponent;
