@@ -1,10 +1,13 @@
-/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
+
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  mode: 'jit',
+  purge: [
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/app/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       backgroundImage: {
@@ -13,6 +16,17 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      gray: colors.trueGray,
+      red: colors.red,
+      blue: colors.lightBlue,
+      yellow: colors.amber,
+    },
+  },
+  variants: {
+    extend: {},
   },
   plugins: [],
-}
+};
