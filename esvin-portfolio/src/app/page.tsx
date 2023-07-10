@@ -1,5 +1,8 @@
-import Image from "next/image";
+  import React from 'react';
+  import 'bootstrap/dist/css/bootstrap.css'
 
 export default function Home() {
-  return <main></main>;
+  return <main>
+    <h1>Test</h1>
+  </main>;
 }
