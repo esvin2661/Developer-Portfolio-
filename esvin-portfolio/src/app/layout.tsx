@@ -19,3 +19,8 @@ export default function RootLayout({
     </html>
   )
 }
+
+
+const myComponent = () => {
+  return <h1>Hello World</h1>
+}
