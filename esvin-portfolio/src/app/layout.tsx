@@ -22,5 +22,13 @@ export default function RootLayout({
 
 
 const myComponent = () => {
-  return <h1>Hello World</h1>
+  return <h1>Hello World</h1>;
+};
+
+const myComponet2 = () => {
+  return <h2>Test 1</h2>;
+};
+
+function myComponet3(){
+  return <div>Tag</div>;
 }
