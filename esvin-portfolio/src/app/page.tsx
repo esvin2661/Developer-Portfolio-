@@ -1,9 +1,9 @@
-  import React from 'react';
-  import 'bootstrap/dist/css/bootstrap.css'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css'
 
-export default function Page() {
+export default function page() {
   return <main>
-    <h1>Test</h1>
+    <h1>Page</h1>
   </main>;
 }
 

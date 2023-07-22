@@ -5,11 +5,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}
+      <body>{children} 
         <div> 
-          <h1>Test 2</h1>
+          <h1>Layout</h1>
         </div>
       </body>
     </html>
   )
 }
+
