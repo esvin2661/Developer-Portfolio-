@@ -26,6 +26,21 @@ const Navbar = () => {
                 </Link>
               </li>
               {/* Add other navbar items here */}
+              <li className ="nav-item">
+                <Link href="/projects">
+                    <span className="nav-link">Projects</span>
+                </Link>
+              </li>
+              <li className ="nav-item">
+                <Link href="/photos">
+                    <span className="nav-link">Photos</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/contact">
+                    <span className="nav-link">Contact</span>
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
