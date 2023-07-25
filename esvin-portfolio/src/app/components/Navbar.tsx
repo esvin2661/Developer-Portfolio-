@@ -1,9 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import Projects from '../projects/page';
-import About from '../about/page';
-import Contact from '../contact/page';
-import Photos from '../photos/page';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Navbar = () => {
@@ -38,7 +35,8 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link href="/contact">
-                    <span className="nav-link">Contact</span>
+                    <span className="nav-link">Contact
+                    </span>
                 </Link>
               </li>
             </ul>
