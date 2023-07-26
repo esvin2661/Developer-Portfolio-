@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Home from './page';
 import About from './about/page';
 import Projects from './projects/page';
 import Photos from './photos/page';
