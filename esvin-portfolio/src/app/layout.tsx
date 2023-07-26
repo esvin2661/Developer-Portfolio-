@@ -1,5 +1,11 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Home from './page';
+import About from './about/page';
+import Projects from './projects/page';
+import Photos from './photos/page';
+import Contact from './contact/page';
+import Skills from './skills/page';
 
 export default function RootLayout({
   children,
@@ -8,10 +14,14 @@ export default function RootLayout({
 }) {
   return (
     <div>
-      <Navbar />
+      {children}
+      <About />
+      <Skills />
+      <Projects />
+      <Photos /> 
+      <Contact />
       <h1>Layout</h1>
       <h2>Test Layout Changes</h2>
-      {children}
     </div>
   );
 }
