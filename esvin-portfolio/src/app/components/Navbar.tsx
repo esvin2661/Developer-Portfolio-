@@ -24,7 +24,11 @@ const Navbar = () => {
                   <span className="nav-link">About</span>
                 </Link>
               </li>
-              {/* Add other navbar items here */}
+              <li className="nav-item">
+                <Link href="/skills">
+                  <span className="nav-link">Skills</span>
+                </Link>
+              </li>
               <li className ="nav-item">
                 <Link href="/projects">
                     <span className="nav-link">Projects</span>
