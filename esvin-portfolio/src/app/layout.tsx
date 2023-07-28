@@ -20,8 +20,6 @@ export default function RootLayout({
       <Projects />
       <Photos />
       <Contact />
-      <h1>Layout</h1>
-      <h2>Test Layout Changes</h2>
     </div>
   );
 }
