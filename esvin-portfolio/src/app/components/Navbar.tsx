@@ -1,9 +1,11 @@
-import React from 'react'
 import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Navbar = () => {
+
+  const NavbarContainer = {}
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="#">Navbar</a>
