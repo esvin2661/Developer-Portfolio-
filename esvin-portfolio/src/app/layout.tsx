@@ -18,7 +18,7 @@ export default function RootLayout({
       <About />
       <Skills />
       <Projects />
-      <Photos /> 
+      <Photos />
       <Contact />
       <h1>Layout</h1>
       <h2>Test Layout Changes</h2>
