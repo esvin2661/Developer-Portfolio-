@@ -1,10 +1,13 @@
+"use client"
 import React from 'react';
 import Navbar from './components/Navbar';
 import About from './about/page';
+import Skills from './skills/page';
 import Projects from './projects/page';
 import Photos from './photos/page';
 import Contact from './contact/page';
-import Skills from './skills/page';
+import Footer from './components/Footer';
+
 
 export default function RootLayout({
   children,
@@ -13,13 +16,14 @@ export default function RootLayout({
 }) {
   return (
     <div>
+      <Navbar />
       {children}
-      <Navbar /> 
-      <About />
+      <About /> 
       <Skills />
-      <Projects />
-      <Photos />
-      <Contact />
+      <Projects /> 
+      <Photos /> 
+      <Contact /> 
+      <Footer />
     </div>
   );
 }
