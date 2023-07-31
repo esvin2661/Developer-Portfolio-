@@ -1,5 +1,4 @@
 "use-client"
-
 import React from "react"
 // pages/index.js (or any other page component)
 
