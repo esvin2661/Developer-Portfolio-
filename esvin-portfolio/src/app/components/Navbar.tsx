@@ -1,50 +1,47 @@
-import Link from 'next/link';
+import { Flex, Button, useColorMode } from '@chakra-ui/react';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import NavLink from './NavLink'; // Import the custom NavLink component
 
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
-    <nav className="navbar navbar-expand-lg navbar">
-      <Link href="/" passHref>
+    <Flex as="nav" align="center" justify="space-between" px={4} py={2} bg="gray.100">
+      {/* Logo */}
+      <NavLink>
         <span className="navbar-brand">Navbar</span>
-      </Link>
-      <button className="navbar-toggler" type="button">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item active">
-            <Link href="/" passHref>
-              <span className="nav-link">Home</span>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/about" passHref>
-              <span className="nav-link">About</span>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/skills" passHref>
-              <span className="nav-link">Skills</span>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/projects" passHref> 
-              <span className="nav-link">Projects</span>
-              </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/photos" passHref>
-              <span className="nav-link">Photos</span>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/contact" passHref>
-              <span className="nav-link">Contact</span>
-            </Link> 
-          </li>
-          {/* Rest of the navigation items */}
-        </ul>
-      </div>
-    </nav>
+      </NavLink>
+
+      {/* Hamburger icon and dark theme switcher */}
+      <Flex alignItems="center">
+        <Button variant="ghost" onClick={toggleColorMode}>
+          {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+        </Button>
+      </Flex>
+
+      {/* Navigation links */}
+      <Flex as="ul" listStyleType="none" mx={0} p={0}>
+        <li className="nav-item active">
+          <NavLink href="/">Home</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink href="/about">About</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink href="/skills">Skills</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink href="/projects">Projects</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink href="/photos">Photos</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink href="/contact">Contact</NavLink>
+        </li>
+        {/* Rest of the navigation items */}
+      </Flex>
+    </Flex>
   );
 };
 
