@@ -1,7 +1,5 @@
 'use client';
-import React from "react"
-import HeroSection from "./components/HeroSection";
-import Projects from "./projects/page";
+import React, { Children } from "react"
 // pages/index.js (or any other page component)
 
 const Home = () => {
