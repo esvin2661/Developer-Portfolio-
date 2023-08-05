@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react';
 import {
   Box,
@@ -15,6 +16,7 @@ export default function Projects() {
   const [liked, setLiked] = useState(false);
 
   return (
+    <div>
     <Center py={6}>
       <HStack spacing={4}>
         <Card liked={liked} setLiked={setLiked} imageUrl="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
@@ -22,6 +24,7 @@ export default function Projects() {
         <Card liked={liked} setLiked={setLiked} imageUrl="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
       </HStack>
     </Center>
+    </div>
   );
 }
 

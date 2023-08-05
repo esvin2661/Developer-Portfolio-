@@ -1,12 +1,16 @@
-'use client';
-import React, { Children } from "react"
-// pages/index.js (or any other page component)
+'use client'
+import React from 'react';
+import HeroSection from "./components/HeroSection";
+import SkillsPage from "./skills/page";
+import Contact from "./contact/page";
 
 const Home = () => {
-  return(
-    <>
-    </>
-  )
-}
+  return (
+    <div>
+      <HeroSection />
+      <SkillsPage />
+    </div>
+  );
+};
 
 export default Home;
