@@ -23,7 +23,7 @@ interface Props {
   children: React.ReactNode
 }
 
-const Links = ['Dashboard', 'Projects', 'Team']
+const Links = ['Dashboard', 'Skills', 'Projects', 'Photos','Contact']
 
 const NavLink = (props: Props) => {
   const { children } = props
@@ -82,7 +82,7 @@ export default function Simple() {
                 />
               </MenuButton>
               <MenuList>
-                <MenuItem>Link 1</MenuItem>
+                <MenuItem> Link 1</MenuItem>
                 <MenuItem>Link 2</MenuItem>
                 <MenuDivider />
                 <MenuItem>Link 3</MenuItem>

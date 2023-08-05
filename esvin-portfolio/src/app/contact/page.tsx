@@ -56,7 +56,7 @@ export default function Contact() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdPhone color="#1970F1" size="20px" />}>
-                        +91-988888888
+                        +978-884-3929
                       </Button>
                       <Button
                         size="md"
@@ -66,7 +66,7 @@ export default function Contact() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdEmail color="#1970F1" size="20px" />}>
-                        hello@abc.com
+                        esvinruiz01@gmail.com 
                       </Button>
                       <Button
                         size="md"
@@ -76,7 +76,7 @@ export default function Contact() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
-                        Karnavati, India
+                        Lawrence, Massachusetts
                       </Button>
                     </VStack>
                   </Box>
