@@ -41,15 +41,6 @@ export default function HeroSection() {
             perfect for freelancers, agencies, and moonlighters.
           </Text>
           <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-            <Button
-              rounded={'full'}
-              bg={'blue.400'}
-              color={'white'}
-              _hover={{
-                bg: 'blue.500',
-              }}>
-              Create Project
-            </Button>
             <Button rounded={'full'}>How It Works</Button>
           </Stack>
         </Stack>

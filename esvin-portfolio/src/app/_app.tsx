@@ -1,3 +1,4 @@
+import '../styles.css';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { AppProps } from 'next/app';
 
