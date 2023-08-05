@@ -19,12 +19,7 @@ export default function RootLayout({
     <div>
       <ChakraProvider>
         <NavBar />
-        <HeroSection />
-        <SkillsPage />
-        <Projects />
-        <Photos />
        { children }
-       <Contact />
        <Footer />
       </ChakraProvider>
     </div>
