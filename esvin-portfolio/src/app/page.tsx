@@ -2,7 +2,7 @@
 import React from 'react';
 import HeroSection from "./components/HeroSection";
 import SkillsPage from "./skills/page";
-import Contact from "./contact/page";
+
 
 const Home = () => {
   return (
