@@ -1,15 +1,21 @@
+import React from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
+import RootLayout from './layout';
 import '../styles.css';
-import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
-import { AppProps } from 'next/app';
 
+interface AppProps {
+  Component: React.ComponentType<any>; // Explicitly define the type of Component
+  pageProps: any; // Adjust this type according to your actual pageProps type
+}
 
-function MyWrapper({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
-      <ColorModeScript initialColorMode="light" />
-      <Component {...pageProps} />
+      <RootLayout>
+        <Component {...pageProps} />
+      </RootLayout>
     </ChakraProvider>
   );
 }
 
-export default MyWrapper;
+export default MyApp;
