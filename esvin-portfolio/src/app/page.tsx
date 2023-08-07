@@ -4,7 +4,7 @@ import HeroSection from "./components/HeroSection";
 import SkillsPage from "./skills/page";
 
 
-const Home = () => {
+const Home  = () => {
   return (
     <div>
       <HeroSection />
