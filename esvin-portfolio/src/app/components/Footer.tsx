@@ -9,7 +9,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaGithub, FaYoutube,FaLinkedin } from 'react-icons/fa'
 import { ReactNode } from 'react'
 
 const Logo = (props: any) => {
@@ -72,7 +72,7 @@ export default function Footer() {
         align={'center'}>
         <Logo />
         <Stack direction={'row'} spacing={6}>
-          <Box as="a" href={'#'}>
+          <Box as="a" href={'/'}>
             Home
           </Box>
           <Box as="a" href={'#'}>
@@ -81,7 +81,7 @@ export default function Footer() {
           <Box as="a" href={'#'}>
             Blog
           </Box>
-          <Box as="a" href={'#'}>
+          <Box as="a" href={'/contact'}>
             Contact
           </Box>
         </Stack>
@@ -99,16 +99,16 @@ export default function Footer() {
           spacing={4}
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          <Text>&copy; 2023 Esvin Ruiz. All rights reserved.</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'#'}>
-              <FaTwitter />
+            <SocialButton label={'LinkedIn'} href={'https://www.linkedin.com/in/esv261/'}>
+              <FaLinkedin />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
+            <SocialButton label={'YouTube'} href={'https://www.youtube.com/channel/UCYyM0LuNo7ulbP7e6NcOxVw'}>
               <FaYoutube />
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
-              <FaInstagram />
+            <SocialButton label={'GitHub'} href={'https://github.com/esvin2661'}>
+              <FaGithub />
             </SocialButton>
           </Stack>
         </Container>

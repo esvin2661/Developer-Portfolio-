@@ -19,7 +19,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
 
   return (
     <NextLink href={href} passHref>
-      <Box
+      <Box  
         as="a"
         px={2}
         py={1}
