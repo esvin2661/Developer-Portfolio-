@@ -19,7 +19,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
 
   return (
     <NextLink href={href} passHref>
-      <Box
+      <Box  
         as="a"
         px={2}
         py={1}
@@ -28,7 +28,6 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
           textDecoration: 'none',
           bg: useColorModeValue('gray.200', 'gray.700'),
         }}
-        className="text-blue-500 font-semibold"
       >
         {children}
       </Box>

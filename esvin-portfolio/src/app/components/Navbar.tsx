@@ -1,5 +1,4 @@
-'use client'
-
+import React from 'react';
 import {
   Box,
   Flex,
@@ -16,19 +15,36 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
-} from '@chakra-ui/react'
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
+} from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-interface Props {
-  children: React.ReactNode
+interface NavLinkProps {
+  children: React.ReactNode;
+  href: string;
+  isExternal?: boolean;
 }
 
-const Links = ['Dashboard', 'Skills', 'Projects', 'Photos','Contact']
+const Links = [
+  { label: 'Home', href: '/' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Photos', href: '/photos' },
+  { label: 'Resume', href: 'https://blush-romola-69.tiiny.site/', isExternal: true }, // Example of an external link
+  { label: 'Contact', href: '/contact'}
+]; 
 
-const NavLink = (props: Props) => {
-  const { children } = props
 
-  return (
+const NavLink = (props: NavLinkProps) => {
+  const { children, href, isExternal } = props;
+
+  const linkComponent = isExternal ? (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {children}
+    </a>
+  ) : (
     <Box
       as="a"
       px={2}
@@ -38,14 +54,17 @@ const NavLink = (props: Props) => {
         textDecoration: 'none',
         bg: useColorModeValue('gray.200', 'gray.700'),
       }}
-      href={'#'}>
+      href={href}
+    >
       {children}
     </Box>
-  )
-}
+  );
+
+  return linkComponent;
+};
 
 export default function Simple() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
@@ -62,7 +81,9 @@ export default function Simple() {
             <Box>Logo</Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.href} href={link.href} isExternal={link.isExternal}>
+                  {link.label}
+                </NavLink>
               ))}
             </HStack>
           </HStack>
@@ -73,7 +94,8 @@ export default function Simple() {
                 rounded={'full'}
                 variant={'link'}
                 cursor={'pointer'}
-                minW={0}>
+                minW={0}
+              >
                 <Avatar
                   size={'sm'}
                   src={
@@ -82,7 +104,7 @@ export default function Simple() {
                 />
               </MenuButton>
               <MenuList>
-                <MenuItem> Link 1</MenuItem>
+                <MenuItem>Link 1</MenuItem>
                 <MenuItem>Link 2</MenuItem>
                 <MenuDivider />
                 <MenuItem>Link 3</MenuItem>
@@ -95,7 +117,9 @@ export default function Simple() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.href} href={link.href} isExternal={link.isExternal}>
+                  {link.label}
+                </NavLink>
               ))}
             </Stack>
           </Box>
@@ -104,5 +128,5 @@ export default function Simple() {
 
       <Box p={4}>Main Content Here</Box>
     </>
-  )
+  );
 }
