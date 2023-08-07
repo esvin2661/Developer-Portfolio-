@@ -29,20 +29,17 @@ export default function HeroSection() {
                 bg: 'blue.400',
                 zIndex: -1,
               }}>
-              Freelance
+             Esvin Ruiz
             </Text>
             <br />{' '}
             <Text color={'blue.400'} as={'span'}>
-              Design Projects
+              Portfolio 
             </Text>{' '}
           </Heading>
           <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-            The project board is an exclusive resource for contract work. It&apos;s
-            perfect for freelancers, agencies, and moonlighters.
+           Hello! I'm Esvin Ruiz, a computer science student at Wilmington University. I'm passionate about creating opportunities for underrepresented minorities and turning innovative ideas into code.
+            &apos;
           </Text>
-          <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-            <Button rounded={'full'}>How It Works</Button>
-          </Stack>
         </Stack>
       </Flex>
       <Flex flex={1}>
