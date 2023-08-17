@@ -1,56 +1,66 @@
-'use client'
+"use client";
 
 import {
   Button,
   Flex,
   Heading,
-  Image,
   Stack,
   Text,
   useBreakpointValue,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
-      <Flex p={8} flex={1} align={'center'} justify={'center'}>
-        <Stack spacing={6} w={'full'} maxW={'lg'}>
-          <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+    <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
+      <Flex p={8} flex={1} align={"center"} justify={"center"}>
+        <Stack spacing={6} w={"full"} maxW={"lg"}>
+          <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
             <Text
-              as={'span'}
-              position={'relative'}
+              as={"span"}
+              position={"relative"}
               _after={{
                 content: "''",
-                width: 'full',
-                height: useBreakpointValue({ base: '20%', md: '30%' }),
-                position: 'absolute',
+                width: "full",
+                height: useBreakpointValue({ base: "20%", md: "30%" }),
+                position: "absolute",
                 bottom: 1,
                 left: 0,
-                bg: 'blue.400',
+                bg: "blue.400",
                 zIndex: -1,
-              }}>
-             Esvin Ruiz
+              }}
+            >
+              Esvin Ruiz
             </Text>
-            <br />{' '}
-            <Text color={'blue.400'} as={'span'}>
-              Portfolio 
-            </Text>{' '}
+            <br />{" "}
+            <Text color={""} as={"span"}>
+              Portfolio
+            </Text>{" "}
           </Heading>
-          <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-           Hello! I'm Esvin Ruiz, a computer science student at Wilmington University. I'm passionate about creating opportunities for underrepresented minorities and turning innovative ideas into code.
+          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+            Hello! I'm Esvin Ruiz, a computer science student at Wilmington
+            University. I'm passionate about creating opportunities for
+            underrepresented minorities and turning innovative ideas into code.
             &apos;
           </Text>
         </Stack>
       </Flex>
-      <Flex flex={1}>
+      <Flex
+        flex={1}
+        position="relative"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
         <Image
-          alt={'Login Image'}
-          objectFit={'cover'}
-          src={
-            'https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-          }
+          alt={"Login Image"}
+          objectFit={"cover"}
+          src={"/Esvin Pic-modified.png"}
+          width={450}
+          height={195}
+          layout="contain"
         />
       </Flex>
     </Stack>
-  )
+  );
 }
