@@ -1,17 +1,19 @@
-import { skills } from "../constants";
+import { Flex, Box, Text } from '@chakra-ui/react';
+import { skills } from '../constants';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact } from 'react-icons/fa';
 
 const SkillsPage: React.FC = () => {
   return (
     <div>
       <h1>Skills</h1>
-      <ul>
+      <Flex direction="column" alignItems="center">
         {skills.map((skill, index) => (
-          <li key={index}>
-            <span>{skill.name}</span>
+          <Box key={index} display="flex" alignItems="center" mb={2}>
             {skill.icon}
-          </li>
+            <Text ml={2}>{skill.name}</Text>
+          </Box>
         ))}
-      </ul>
+      </Flex>
     </div>
   );
 };
