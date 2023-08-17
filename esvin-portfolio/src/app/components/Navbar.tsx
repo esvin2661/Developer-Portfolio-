@@ -16,7 +16,11 @@ import {
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, ReactIcon } from '@chakra-ui/icons';
+import { useState } from 'react';
+//import {CgDarkMode} from 'react-icons/CgDarkMode';
+
+//const [darkMode,setDarkMode] = useState(false);
 
 interface NavLinkProps {
   children: React.ReactNode;

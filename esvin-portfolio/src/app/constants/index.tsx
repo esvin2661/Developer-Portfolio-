@@ -1,4 +1,5 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact,FaPython,FaAws} from 'react-icons/fa';
+
 // Import other icons and define custom images here
 
 export const navLinks = [
@@ -27,23 +28,29 @@ export const navLinks = [
 
 export const skills = [
   {
-    name: "HTML 5",
-    icon: <FaHtml5 />,
+    name: "HTML5",
+    icon: <FaHtml5 className="text-blue-500" />,
   },
   {
-    name: "CSS 3",
-    icon: <FaCss3Alt />,
+    name: "CSS3",
+    icon: <FaCss3Alt className="text-purple-500" />,
   },
   {
     name: "JavaScript",
-    icon: <FaJs />,
+    icon: <FaJs className="text-yellow-500" />,
   },
   {
     name: "React.js",
-    icon: <FaReact />,
+    icon: <FaReact className="text-blue-300" />,
   },
-  // Add other skills with their respective icons
-  // ...
+  {
+    name:"Python",
+    icon: <FaPython/>
+  },
+  {
+    name:"AWS",
+    icon:<FaAws/>
+  },
 ];
 
 export const experiences = [
