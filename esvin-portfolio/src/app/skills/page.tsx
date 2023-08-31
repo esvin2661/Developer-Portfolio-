@@ -1,8 +1,7 @@
 import { Flex, Box, Text } from '@chakra-ui/react';
 import { skills } from '../constants';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact } from 'react-icons/fa';
 
-const SkillsPage: React.FC = () => {
+const SkillsPage = () => {
   return (
     <div>
       <h1 className="text-4xl font-bold text-center mb-4">Skills</h1>

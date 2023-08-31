@@ -1,30 +1,8 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact,FaPython,FaAws} from 'react-icons/fa';
+import {SiTypescript} from 'react-icons/Si';
+import {TbSql} from 'react-icons/tb';
 
 // Import other icons and define custom images here
-
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "projects",
-    title: "Projects",
-  },
-  {
-    id: "photos",
-    title: "Photos",
-  },
-  {
-    id: "skills",
-    title: "Skills",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
-];
-  // ... your navLinks array
 
 export const skills = [
   {
@@ -48,9 +26,17 @@ export const skills = [
     icon: <FaPython/>
   },
   {
+    name:"TypeScript",
+    icon:<SiTypescript/> 
+  },
+  {
+    name:"SQL",
+    icon:<TbSql/>
+  },
+  {
     name:"AWS",
     icon:<FaAws/>
-  },
+  }
 ];
 
 export const experiences = [
