@@ -11,7 +11,7 @@ export const skills = [
   },
   {
     name: "CSS3",
-    icon: <FaCss3Alt className="text-purple-500" />,
+    icon: <FaCss3Alt className="#4995e7" />,
   },
   {
     name: "JavaScript",
