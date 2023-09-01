@@ -4,7 +4,7 @@ import { skills } from '../constants';
 const SkillsPage = () => {
   return (
     <div>
-      <h1 className="text-4xl font-bold text-center mb-4">Skills</h1>
+      <h1>Skills</h1>
       <Flex alignItems="center" justifyContent="center">
         {skills.map((skill, index) => (
           <Box
@@ -13,7 +13,7 @@ const SkillsPage = () => {
             alignItems="center"
             mr={4}
             p={2}
-            border="1px solid gray"
+            border="3px solid gray"
             borderRadius="md"
           >
             {skill.icon}
