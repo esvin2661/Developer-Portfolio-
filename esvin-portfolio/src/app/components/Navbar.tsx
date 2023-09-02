@@ -30,10 +30,9 @@ interface NavLinkProps {
 
 const Links = [
   { label: 'Home', href: '/' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Photos', href: '/photos' },
-  { label: 'Resume', href: 'https://blush-romola-69.tiiny.site/', isExternal: true }, // Example of an external link
-  { label: 'Contact', href: '/contact'}
+  { label: 'Projects', href: '#project-section' },
+  { label: 'Photos', href: '#photo-section' },
+  { label: 'Resume', href: 'https://blush-romola-69.tiiny.site/', isExternal: true },
 ]; 
 
 
@@ -103,7 +102,7 @@ export default function Simple() {
                 <Avatar
                   size={'sm'}
                   src={
-                    'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
+                    '/Users/esvin/Desktop/Project-Deployment /Developer-Porfolio-/esvin-portfolio/public/Esvin Pic-modified.png'
                   }
                 />
               </MenuButton>
