@@ -49,16 +49,7 @@ export const experiences = [
   },
 ];
 
-export const photos = [
-  {
-    name:"Name of your photo",
-    description:"Description of the photo",
-    date:"Date of the photo",
-    image:"URL of the photo image",
-  },
-  // ... your photos array
-];
-
+//Project Constants are stored in this array 
 export const projects = [
   {
     name:"Name of the project",
@@ -66,5 +57,58 @@ export const projects = [
     date:"Date of the projet",
     source:"URL to the source code of the project",
   },
-  // ... your projects array
+  {
+    name:"Name of the project",
+    description:"Description of the project",
+    date:"Date of the projet",
+    source:"URL to the source code of the project",
+  },
+  {
+    name:"Name of the project",
+    description:"Description of the project",
+    date:"Date of the projet",
+    source:"URL to the source code of the project",
+  },
 ];
+
+// Photo constants are stored in this array 
+export const photos = [
+  {
+    name:"Name of your photo",
+    description:"Description of the photo",
+    date:"Date of the photo",
+    image:"URL of the photo image",
+  },
+  {
+    name:"Name of your photo",
+    description:"Description of the photo",
+    date:"Date of the photo",
+    image:"URL of the photo image",
+  },
+  {
+    name:"Name of your photo",
+    description:"Description of the photo",
+    date:"Date of the photo",
+    image:"URL of the photo image",
+  },
+  {
+    name:"Name of your photo",
+    description:"Description of the photo",
+    date:"Date of the photo",
+    image:"URL of the photo image",
+  },
+  {
+    name:"Name of your photo",
+    description:"Description of the photo",
+    date:"Date of the photo",
+    image:"URL of the photo image",
+  },
+  {
+    name:"Name of your photo",
+    description:"Description of the photo",
+    date:"Date of the photo",
+    image:"URL of the photo image",
+  },
+
+];
+
