@@ -15,8 +15,12 @@ const scrolltosection = (sectionId: string) => {
 const Home = () => {
   return (
     <div>
-      <HeroSection />
-      <SkillsPage />
+      <div id="hero-section">
+        <HeroSection />
+      </div>
+      <div id="skills-section">
+        <SkillsPage />
+      </div>
       <div id="project-section">
         <ProjectSection />
       </div>
