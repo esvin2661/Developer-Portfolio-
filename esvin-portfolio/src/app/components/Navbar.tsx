@@ -1,3 +1,4 @@
+{/*  THIS IS MY ORIGINAL NAVBAR    SECTION */}
 import React from "react";
 import {
   chakra,
@@ -17,14 +18,12 @@ import {
   useColorModeValue,
   Stack,
   VisuallyHidden,
+  useColorMode, // Import useColorMode
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, ReactIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons"; // Import MoonIcon and SunIcon
 import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { ReactNode } from 'react'
 import { useState } from "react";
-//import {CgDarkMode} from 'react-icons/CgDarkMode';
-
-//const [darkMode,setDarkMode] = useState(false);
 
 interface NavLinkProps {
   children: React.ReactNode;
@@ -100,9 +99,9 @@ const NavLink = (props: NavLinkProps) => {
   return linkComponent;
 };
 
-
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode(); // Get colorMode and toggleColorMode
 
   return (
     <>
@@ -134,31 +133,14 @@ export default function Simple() {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
+            <IconButton
+              icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />} // Toggle button based on color mode
+              onClick={toggleColorMode} // Toggle color mode on button click
+              aria-label={colorMode === "light" ? "Switch to dark mode" : "Switch to light mode"} // Aria label based on color mode
+              variant="ghost"
+            />
             <Menu>
-              <MenuButton
-                as={Button}
-                rounded={"full"}
-                variant={"link"}
-                cursor={"pointer"}
-                minW={0}
-              >
-                <Box>
-                  <Stack direction={"row"} spacing={6}>
-                    <SocialButton
-                      label={"LinkedIn"}
-                      href={"https://www.linkedin.com/in/esv261/"} >
-                      <FaLinkedin />
-                    </SocialButton>
-                  </Stack>
-                </Box>
-
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
+              {/* ... Your existing menu code ... */}
             </Menu>
           </Flex>
         </Flex>

@@ -1,15 +1,18 @@
-// app/providers.tsx
-'use client';
+import React from 'react';
+import { ChakraProvider, CSSReset, extendTheme } from '@chakra-ui/react';
+import Navbar from "./components/Navbar";
 
-import { CacheProvider } from '@chakra-ui/next-js';
-import { ChakraProvider } from '@chakra-ui/react';
+const theme = extendTheme({
+  // Your theme configurations here
+});
 
-export function Providers({ children }: { children: React.ReactNode }) {
+function App() {
   return (
-    <CacheProvider>
-      <ChakraProvider>
-        {children}
-      </ChakraProvider>
-    </CacheProvider>
+    <ChakraProvider theme={theme}>
+      <CSSReset />
+      <Navbar />
+    </ChakraProvider>
   );
 }
+
+export default App;
