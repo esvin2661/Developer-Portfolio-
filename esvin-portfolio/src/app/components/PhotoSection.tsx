@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { BsArrowUpRight, BsHeartFill, BsHeart } from 'react-icons/bs';
 
+//Input inforation to display in each photo card. 
 export default function Photos() {
   const cardData = [
     {

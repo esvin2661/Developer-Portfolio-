@@ -30,11 +30,12 @@ interface NavLinkProps {
   href: string;
   isExternal?: boolean;
 }
-
+// Handle navbar navigatio
 const Links = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "#project-section" },
   { label: "Photos", href: "#photo-section" },
+  { label: "Portfolio", href:"https://www.linkedin.com/in/esv261/"},
   {
     label: "Resume",
     href: "https://blush-romola-69.tiiny.site/",
@@ -102,10 +103,10 @@ const NavLink = (props: NavLinkProps) => {
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode(); // Get colorMode and toggleColorMode
-
+// <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+      <Box>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
