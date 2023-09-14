@@ -2,9 +2,12 @@
 import React from "react";
 import HeroSection from "./components/HeroSection";
 import SkillsPage from "./skills/page";
-import ProjectSection from "./ProjectSection";
-import PhotoSection from "./PhotoSection";
+import ProjectSection from "./components/ProjectSection";
+import PhotoSection from "./components/PhotoSection";
+import './styles.css'; 
 
+
+//Handles smooth scrolling , Figure out how to slow down the transition. 
 const scrolltosection = (sectionId: string) => {
   const section = document.getElementById(sectionId);
   if (section) {

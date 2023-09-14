@@ -57,12 +57,12 @@ const SocialButton = ({
     </chakra.button>
   )
 }
+//code for grey box
+/* <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>*/
 
 export default function Footer() {
   return (
-    <Box
-      bg={useColorModeValue('gray.50', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}>
+    <Box>
       <Container
         as={Stack}
         maxW={'6xl'}
