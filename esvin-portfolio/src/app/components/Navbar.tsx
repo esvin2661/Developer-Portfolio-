@@ -1,41 +1,36 @@
-{/*  THIS IS MY ORIGINAL NAVBAR    SECTION */}
 import React from "react";
 import {
   chakra,
   Box,
   Flex,
-  Avatar,
   HStack,
-  Text,
   IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
   VisuallyHidden,
-  useColorMode, // Import useColorMode
+  useColorMode,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons"; // Import MoonIcon and SunIcon
+import {
+  HamburgerIcon,
+  CloseIcon,
+  MoonIcon,
+  SunIcon,
+} from "@chakra-ui/icons";
 import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa";
-import { ReactNode } from 'react'
-import { useState } from "react";
+import { ReactNode } from "react";
 
 interface NavLinkProps {
   children: React.ReactNode;
   href: string;
   isExternal?: boolean;
 }
-// Handle navbar navigatio
+
 const Links = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "#project-section" },
   { label: "Photos", href: "#photo-section" },
-  { label: "Portfolio", href:"https://www.linkedin.com/in/esv261/"},
+  { label: "Portfolio", href: "https://www.linkedin.com/in/esv261/" },
   {
     label: "Resume",
     href: "https://blush-romola-69.tiiny.site/",
@@ -48,31 +43,32 @@ const SocialButton = ({
   label,
   href,
 }: {
-  children: ReactNode
-  label: string
-  href: string
+  children: ReactNode;
+  label: string;
+  href: string;
 }) => {
   return (
     <chakra.button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-      rounded={'full'}
+      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+      rounded={"full"}
       w={8}
       h={8}
-      cursor={'pointer'}
-      as={'a'}
+      cursor={"pointer"}
+      as={"a"}
       href={href}
-      display={'inline-flex'}
-      alignItems={'center'}
-      justifyContent={'center'}
-      transition={'background 0.3s ease'}
+      display={"inline-flex"}
+      alignItems={"center"}
+      justifyContent={"center"}
+      transition={"background 0.3s ease"}
       _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-      }}>
+        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+      }}
+    >
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
     </chakra.button>
-  )
-}
+  );
+};
 
 const NavLink = (props: NavLinkProps) => {
   const { children, href, isExternal } = props;
@@ -102,8 +98,8 @@ const NavLink = (props: NavLinkProps) => {
 
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { colorMode, toggleColorMode } = useColorMode(); // Get colorMode and toggleColorMode
-// <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <>
       <Box>
@@ -117,6 +113,8 @@ export default function Simple() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>Logo</Box>
+          </HStack>
+          <Flex alignItems={"center"} justifyContent={"flex-end"}>
             <HStack
               as={"nav"}
               spacing={4}
@@ -132,18 +130,17 @@ export default function Simple() {
                 </NavLink>
               ))}
             </HStack>
-          </HStack>
-          <Flex alignItems={"center"}>
-            <IconButton
-              icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />} // Toggle button based on color mode
-              onClick={toggleColorMode} // Toggle color mode on button click
-              aria-label={colorMode === "light" ? "Switch to dark mode" : "Switch to light mode"} // Aria label based on color mode
-              variant="ghost"
-            />
-            <Menu>
-              {/* ... Your existing menu code ... */}
-            </Menu>
           </Flex>
+          <IconButton
+            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            onClick={toggleColorMode}
+            aria-label={
+              colorMode === "light"
+                ? "Switch to dark mode"
+                : "Switch to light mode"
+            }
+            variant="ghost"
+          />
         </Flex>
 
         {isOpen ? (
