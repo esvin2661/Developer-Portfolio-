@@ -95,7 +95,7 @@ const NavLink = (props: NavLinkProps) => {
 
   return linkComponent;
 };
-
+// 
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
