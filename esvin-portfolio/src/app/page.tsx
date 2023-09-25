@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import SkillsPage from "./skills/page";
 import ProjectSection from "./components/ProjectSection";
 import PhotoSection from "./components/PhotoSection";
+import GitHubContributions from "./components/GitHubContributions";
 import './styles.css'; 
 
 
@@ -20,6 +21,9 @@ const Home = () => {
     <div>
       <div id="hero-section">
         <HeroSection />
+      </div>
+      <div id="github-contributions">
+        <GitHubContributions />
       </div>
       <div id="skills-section">
         <SkillsPage />
