@@ -4,4 +4,12 @@
 @import 'tailwindcss/utilities';
 
 :root{color:#00e031};
-:root{background-color:black};
+:root{background-color:black };
+
+
+.github-contributions {
+    display: flex; /* This ensures flexbox is applied */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: red;
+  }
