@@ -2,8 +2,6 @@
 import React from "react";
 import HeroSection from "./components/HeroSection";
 import SkillsPage from "./skills/page";
-import ProjectSection from "./components/ProjectSection";
-import PhotoSection from "./components/PhotoSection";
 import GitHubContributions from "./components/GitHubContributions";
 import './styles.css'; 
 
@@ -16,7 +14,7 @@ const scrolltosection = (sectionId: string) => {
   }
 };
 
-const Home = () => {
+const About = () => {
   return (
     <div>
       <div className="hero-section">
@@ -28,14 +26,9 @@ const Home = () => {
       <div className="skills-section">
         <SkillsPage />
       </div>
-      <div className="project-section">
-        <ProjectSection />
-      </div>
-      <div className="photo-section">
-        <PhotoSection />
-      </div>
     </div>
   );
 };
 
-export default Home;
+
+export default About; 

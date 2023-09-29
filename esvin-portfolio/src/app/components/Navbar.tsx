@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import {
   chakra,
@@ -17,7 +18,6 @@ import {
   MoonIcon,
   SunIcon,
 } from "@chakra-ui/icons";
-import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { ReactNode } from "react";
 
 interface NavLinkProps {
@@ -27,9 +27,9 @@ interface NavLinkProps {
 }
 
 const Links = [
-  { label: "Home", href: "/" },
-  { label: "Projects", href: "#project-section" },
-  { label: "Photos", href: "#photo-section" },
+  { label: "About", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "Photos", href: "/photos" },
   { label: "Portfolio", href: "https://www.linkedin.com/in/esv261/" },
   {
     label: "Resume",
