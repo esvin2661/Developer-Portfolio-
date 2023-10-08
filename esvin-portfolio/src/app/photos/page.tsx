@@ -9,12 +9,35 @@ import {
   Center,
   useColorModeValue,
   HStack,
+  VStack,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import { BsArrowUpRight, BsHeartFill, BsHeart } from 'react-icons/bs';
 
 //Input inforation to display in each photo card. 
 export default function Photos() {
-  const cardData = [
+  const PhotoData  = [
+    {
+      imageUrl:
+        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+      heading: 'Esvin Photo 1',
+      text:
+        'In this post, we will give an overview of what is new in React 18, and what it means for the future.',
+    },
+    {
+      imageUrl:
+        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+      heading: 'Esvin Photo  2',
+      text:
+        'Another project description goes here.',
+    },
+    {
+      imageUrl:
+        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+      heading: 'Esvin Photo 3',
+      text:
+        'Yet another project description for the third card.',
+    },
     {
       imageUrl:
         'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
@@ -38,23 +61,27 @@ export default function Photos() {
     },
   ];
 
-  return (
-    <div>
-      <Center py={6}>
-        <HStack spacing={4}>
-          {cardData.map((card, index) => (
-            <Card
-              key={index}
-              imageUrl={card.imageUrl}
-              heading={card.heading}
-              text={card.text}
-            />
-          ))}
-        </HStack>
-      </Center>
-    </div>
-  );
-}
+    return (
+      <div>
+        <Center py={6}>
+          <Flex>
+            <VStack spacing={4} align="stretch">
+              <SimpleGrid columns={3} spacing={4}>
+                {PhotoData.map((card, index) => (
+                  <Card
+                    key={index}
+                    imageUrl={card.imageUrl}
+                    heading={card.heading}
+                    text={card.text}
+                  />
+                ))}
+              </SimpleGrid>
+            </VStack>
+          </Flex>
+        </Center>
+      </div>
+    )
+  }
 
 function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; text: string }) {
   return (
@@ -104,4 +131,5 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
       </HStack>
     </Box>
   );
-}
+};
+

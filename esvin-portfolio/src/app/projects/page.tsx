@@ -1,55 +1,78 @@
 'use client'
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Box,
   Heading,
   Text,
   Img,
   Flex,
-  Center,
   useColorModeValue,
   HStack,
+  SimpleGrid,
+  Center,
+  VStack,
 } from '@chakra-ui/react';
-import { BsArrowUpRight, BsHeartFill, BsHeart } from 'react-icons/bs';
+import { BsArrowUpRight } from 'react-icons/bs';
 
+const ProjectData = [
+  {
+    imageUrl:
+      'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+    heading: 'Esvin Project 1',
+    text:
+      'In this post, we will give an overview of what is new in React 18, and what it means for the future.',
+  },
+  {
+    imageUrl:
+      'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+    heading: 'Esvin Project 2',
+    text: 'Another project description goes here.',
+  },
+  {
+    imageUrl:
+      'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+    heading: 'Esvin Project 3',
+    text: 'Yet another project description for the third card.',
+  },
+  {
+    imageUrl:
+      'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+    heading: 'Esvin Project 3',
+    text: 'Yet another project description for the third card.',
+  },
+  {
+    imageUrl:
+      'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+    heading: 'Esvin Project 3',
+    text: 'Yet another project description for the third card.',
+  },
+  {
+    imageUrl:
+      'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+    heading: 'Esvin Project 3',
+    text: 'Yet another project description for the third card.',
+  },
+];
+
+//used to Add or Remove prooject rows
 export default function Projects() {
-  const cardData = [
-    {
-      imageUrl:
-        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
-      heading: 'Esvin Project 1',
-      text:
-        'In this post, we will give an overview of what is new in React 18, and what it means for the future.',
-    },
-    {
-      imageUrl:
-        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
-      heading: 'Esvin Project 2',
-      text:
-        'Another project description goes here.',
-    },
-    {
-      imageUrl:
-        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
-      heading: 'Esvin Project 3',
-      text:
-        'Yet another project description for the third card.',
-    },
-  ];
-
   return (
     <div>
       <Center py={6}>
-        <HStack spacing={4}>
-          {cardData.map((card, index) => (
-            <Card
-              key={index}
-              imageUrl={card.imageUrl}
-              heading={card.heading}
-              text={card.text}
-            />
-          ))}
-        </HStack>
+        <Flex>
+          <VStack spacing={4} align="stretch">
+            <SimpleGrid columns={3} spacing={4}>
+              {ProjectData.map((card, index) => (
+                <Card
+                  key={index}
+                  imageUrl={card.imageUrl}
+                  heading={card.heading}
+                  text={card.text}
+                />
+              ))}
+            </SimpleGrid>
+          </VStack>
+        </Flex>
       </Center>
     </div>
   );
@@ -58,16 +81,16 @@ export default function Projects() {
 function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; text: string }) {
   return (
     <Box
-    w="xs"
-    rounded={'sm'}
-    my={5}
-    mx={[0, 5]}
-    overflow={'hidden'}
-    bg="white"
-    border={'1px'}
-    borderColor="black"
-    boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}
-  >
+      w="xs"
+      rounded={'sm'}
+      my={5}
+      mx={[0, 5]}
+      overflow={'hidden'}
+      bg="white"
+      border={'1px'}
+      borderColor="black"
+      boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}
+    >
       <Box h={'200px'} borderBottom={'1px'} borderColor="black">
         <Img src={imageUrl} roundedTop={'sm'} objectFit="cover" h="full" w="full" alt={'Card Image'} />
       </Box>

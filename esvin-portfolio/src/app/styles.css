@@ -8,8 +8,13 @@
 
 
 .github-contributions {
-    display: flex; /* This ensures flexbox is applied */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    background-color: red;
-  }
+  /* Your CSS styles for the .github-contributions element go here */
+  background-color: #f0f0f0;
+  color:red
+  /* Add any other styles you want */
+}
+
+.contributinos-header {
+  text-align:center;
+  color:red 
+}
