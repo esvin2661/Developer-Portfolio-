@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import {
   chakra,
@@ -11,20 +11,18 @@ import {
   Stack,
   VisuallyHidden,
   useColorMode,
+  Container,
+  Text,
 } from "@chakra-ui/react";
-import {
-  HamburgerIcon,
-  CloseIcon,
-  MoonIcon,
-  SunIcon,
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { ReactNode } from "react";
-
+import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa";
 interface NavLinkProps {
   children: React.ReactNode;
   href: string;
   isExternal?: boolean;
 }
+import Image from "next/image";
 
 const Links = [
   { label: "About", href: "/" },
@@ -95,7 +93,7 @@ const NavLink = (props: NavLinkProps) => {
 
   return linkComponent;
 };
-// 
+//
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
@@ -111,8 +109,15 @@ export default function Simple() {
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
+          {/* Handles Logo Customazation */}
           <HStack spacing={8} alignItems={"center"}>
-            <Box>Logo</Box>
+            <Image
+              alt={"Login Image"}
+              src={"/logo_transparent.png"}
+              width={70}
+              height={50}
+              layout="fixed"
+            />
           </HStack>
           <Flex alignItems={"center"} justifyContent={"flex-end"}>
             <HStack
@@ -131,33 +136,74 @@ export default function Simple() {
               ))}
             </HStack>
           </Flex>
-          <IconButton
-            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            onClick={toggleColorMode}
-            aria-label={
-              colorMode === "light"
-                ? "Switch to dark mode"
-                : "Switch to light mode"
-            }
-            variant="ghost"
-          />
+
+          <Box
+            borderTopWidth={1}
+            borderStyle={"solid"}
+            borderColor={useColorModeValue("gray.200", "gray.700")}
+          >
+            <Container
+              as={Stack}
+              maxW={"6xl"}
+              py={4}
+              direction={{ base: "column", md: "row" }}
+              spacing={4}
+              justify={{ base: "center", md: "space-between" }}
+              align={{ base: "center", md: "center" }}
+            >
+              <Stack direction={"row"} spacing={6}>
+                <IconButton
+                  icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                  onClick={toggleColorMode}
+                  aria-label={
+                    colorMode === "light"
+                      ? "Switch to dark mode"
+                      : "Switch to light mode"
+                  }
+                  variant="ghost"
+                />
+                <SocialButton
+                  label={"LinkedIn"}
+                  href={"https://www.linkedin.com/in/esv261/"}
+                >
+                  <FaLinkedin />
+                </SocialButton>
+                <SocialButton
+                  label={"YouTube"}
+                  href={
+                    "https://www.youtube.com/channel/UCYyM0LuNo7ulbP7e6NcOxVw"
+                  }
+                >
+                  <FaYoutube />
+                </SocialButton>
+                <SocialButton
+                  label={"GitHub"}
+                  href={"https://github.com/esvin2661"}
+                >
+                  <FaGithub />
+                </SocialButton>
+              </Stack>
+            </Container>
+          </Box>
         </Flex>
 
-        {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={4}>
-              {Links.map((link) => (
-                <NavLink
-                  key={link.href}
-                  href={link.href}
-                  isExternal={link.isExternal}
-                >
-                  {link.label}
-                </NavLink>
-              ))}
-            </Stack>
-          </Box>
-        ) : null}
+        <Box>
+          {isOpen ? (
+            <Box pb={4} display={{ md: "none" }}>
+              <Stack as={"nav"} spacing={4}>
+                {Links.map((link) => (
+                  <NavLink
+                    key={link.href}
+                    href={link.href}
+                    isExternal={link.isExternal}
+                  >
+                    {link.label}
+                  </NavLink>
+                ))}
+              </Stack>
+            </Box>
+          ) : null}
+        </Box>
       </Box>
     </>
   );

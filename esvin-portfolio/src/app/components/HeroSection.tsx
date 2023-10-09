@@ -28,12 +28,13 @@ export default function HeroSection() {
                 left: 0,
                 bg: "blue.400",
                 zIndex: -1,
+                color: 3,
               }}
             >
               Esvin Ruiz
             </Text>
             <br />{" "}
-            <Text color={""} as={"span"}>
+            <Text color={"#54bbdc"} as={"span"}>
               Portfolio
             </Text>{" "}
           </Heading>

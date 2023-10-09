@@ -3,18 +3,5 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-:root{color:#00e031};
-:root{background-color:black };
-
-
-.github-contributions {
-  /* Your CSS styles for the .github-contributions element go here */
-  background-color: #f0f0f0;
-  color:red
-  /* Add any other styles you want */
-}
-
-.contributinos-header {
-  text-align:center;
-  color:red 
-}
+:root{color:black };
+:root{background-color: #f7f6f5 };
