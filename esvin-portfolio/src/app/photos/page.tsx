@@ -83,6 +83,7 @@ export default function Photos() {
     )
   }
 
+// This will edit the card 
 function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; text: string }) {
   return (
     <Box
@@ -94,7 +95,7 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
     bg="white"
     border={'1px'}
     borderColor="black"
-    boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}
+    boxShadow={useColorModeValue('3px 6px 0 black', '3px 6px 0 cyan')}
   >
       <Box h={'200px'} borderBottom={'1px'} borderColor="black">
         <Img src={imageUrl} roundedTop={'sm'} objectFit="cover" h="full" w="full" alt={'Card Image'} />

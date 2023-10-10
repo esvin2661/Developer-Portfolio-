@@ -5,7 +5,7 @@ import { skills } from '../constants';
 const SkillsPage = () => {
   return (
     <div>
-      <h1 id="skills">Skills</h1>
+     <Text fontSize={23} textAlign={['center']}>ToolBox</Text>
       <Flex alignItems="center" justifyContent="center">
         {skills.map((skill, index) => (
           <Box
