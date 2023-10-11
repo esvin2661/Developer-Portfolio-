@@ -29,7 +29,7 @@ export default function Photos() {
         'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
       heading: 'Esvin Photo  2',
       text:
-        'Another project description goes here.',
+        'Photo is not linked to project ',
     },
     {
       imageUrl:
@@ -101,10 +101,7 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
         <Img src={imageUrl} roundedTop={'sm'} objectFit="cover" h="full" w="full" alt={'Card Image'} />
       </Box>
       <Box p={4}>
-        <Box bg="black" display={'inline-block'} px={2} py={1} color="white" mb={2}>
-          <Text fontSize={'xs'} fontWeight="medium">
-            React
-          </Text>
+        <Box>
         </Box>
         <Heading color={'black'} fontSize={'2xl'} noOfLines={1}>
           {heading}
@@ -113,13 +110,7 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
           {text}
         </Text>
       </Box>
-      <HStack borderTop={'1px'} color="black">
-        <Flex p={4} alignItems="center" justifyContent={'space-between'} roundedBottom={'sm'} cursor={'pointer'} w="full">
-          <Text fontSize={'md'} fontWeight={'semibold'}>
-            View more
-          </Text>
-          <BsArrowUpRight />
-        </Flex>
+      <HStack>
         <Flex
           p={4}
           alignItems="center"
