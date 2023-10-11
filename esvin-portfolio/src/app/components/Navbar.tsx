@@ -101,7 +101,7 @@ export default function Simple() {
   return (
     <>
       <Box>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}

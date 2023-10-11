@@ -22,7 +22,7 @@ export default function HeroSection() {
               _after={{
                 content: "''",
                 width: "full",
-                height: useBreakpointValue({ base: "20%", md: "30%" }),
+                height: useBreakpointValue({ base: "15%", md: "25%%" }),
                 position: "absolute",
                 bottom: 1,
                 left: 0,
@@ -34,11 +34,11 @@ export default function HeroSection() {
               Esvin Ruiz
             </Text>
             <br />{" "}
-            <Text color={"#54bbdc"} as={"span"}>
+            <Text color={"blue.400"} as={"span"}>
               Portfolio
             </Text>{" "}
           </Heading>
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+          <Text fontSize={{ base: "md", lg: "lg" }} color={"black "}>
             Hello! I'm Esvin Ruiz, a computer science student at Wilmington
             University. I'm passionate about creating opportunities for
             underrepresented minorities and turning innovative ideas into code.
