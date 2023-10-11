@@ -16,7 +16,6 @@ const GitHubContributions = () => {
       <Box>
         <Flex h={500} alignItems={"center"} justifyContent={"Center"}>
           <div className="github-contributions">
-            <div className="contributinos-header">
               <Text fontSize={23} textAlign={['center']}>GitHub Contributions</Text>
               <img
                 src="http://ghchart.rshah.org/esvin2661"
@@ -24,7 +23,6 @@ const GitHubContributions = () => {
                 style={{ width: "800px", height: "auto" }} 
               />
             </div>
-          </div>
         </Flex>
       </Box>
     </>
