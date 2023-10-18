@@ -3,6 +3,8 @@ import React from "react";
 import HeroSection from "./components/HeroSection";
 import SkillsPage from "./skills/page";
 import GitHubContributions from "./components/GitHubContributions";
+import ProjectSection from "./components/ProjectSection";
+import PhotoSection from "./components/PhotosSection";
 import './styles.css'; 
 
 
@@ -16,17 +18,13 @@ const scrolltosection = (sectionId: string) => {
 
 const About = () => {
   return (
-    <div>
-      <div className="hero-section">
+    <>
         <HeroSection />
-      </div>
-      <div className="github-contributions">
         <GitHubContributions />
-      </div>
-      <div className="skills-section">
         <SkillsPage />
-      </div>
-    </div>
+        <ProjectSection />
+        <PhotoSection/> 
+   </>
   );
 };
 

@@ -12,10 +12,15 @@ import {
   VStack,
   SimpleGrid,
 } from '@chakra-ui/react';
+import Image from "next/image";
 import { BsArrowUpRight, BsHeartFill, BsHeart } from 'react-icons/bs';
+
+
 
 //Input inforation to display in each photo card. 
 export default function Photos() {
+    
+
   const PhotoData  = [
     {
       imageUrl:
@@ -66,6 +71,8 @@ export default function Photos() {
         <Center py={6}>
           <Flex>
             <VStack spacing={4} align="stretch">
+            //Handles the photo text 
+                <Text fontSize={23} textAlign={['center']}>Photos</Text> 
               <SimpleGrid columns={3} spacing={4}>
                 {PhotoData.map((card, index) => (
                   <Card

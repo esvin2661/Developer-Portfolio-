@@ -61,6 +61,8 @@ export default function Projects() {
       <Center py={6}>
         <Flex>
           <VStack spacing={4} align="stretch">
+            //Handles Project header 
+            <Text fontSize={23} textAlign={['center']}>Projects</Text>
             <SimpleGrid columns={3} spacing={4}>
               {ProjectData.map((card, index) => (
                 <Card
