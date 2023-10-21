@@ -18,13 +18,13 @@ const scrolltosection = (sectionId: string) => {
 
 const About = () => {
   return (
-    <>
+    <div className="smooth-scrolling">
         <HeroSection />
         <GitHubContributions />
         <SkillsPage />
         <ProjectSection />
         <PhotoSection/> 
-   </>
+   </div>
   );
 };
 

@@ -5,3 +5,8 @@
 
 :root{color:black };
 :root{background-color: #f7f6f5 };
+
+.smooth-scrolling{
+    scroll-behavior: smooth;
+    transition-duration: 1s;
+}
