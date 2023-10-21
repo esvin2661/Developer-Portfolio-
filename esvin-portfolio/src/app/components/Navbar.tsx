@@ -26,8 +26,8 @@ import Image from "next/image";
 
 const Links = [
   { label: "About", href: "/" },
-  { label: "Projects", href: "ProjectSection" },
-  { label: "Photos", href: "PhotoSection" },
+  { label: 'Projects', href: '#project-section' },
+  { label: 'Photos', href: '#photo-section' },
   { label: "Portfolio", href: "https://www.linkedin.com/in/esv261/" },
   {
     label: "Resume",
