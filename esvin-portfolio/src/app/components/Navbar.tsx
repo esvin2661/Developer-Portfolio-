@@ -26,8 +26,8 @@ import Image from "next/image";
 
 const Links = [
   { label: "About", href: "/" },
-  { label: "Projects", href: " " },
-  { label: "Photos", href: " " },
+  { label: "Projects", href: "ProjectSection" },
+  { label: "Photos", href: "PhotoSection" },
   { label: "Portfolio", href: "https://www.linkedin.com/in/esv261/" },
   {
     label: "Resume",
@@ -35,6 +35,7 @@ const Links = [
     isExternal: true,
   },
 ];
+
 
 const SocialButton = ({
   children,
