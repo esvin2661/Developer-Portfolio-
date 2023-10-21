@@ -22,8 +22,12 @@ const About = () => {
         <HeroSection />
         <GitHubContributions />
         <SkillsPage />
+        <div id="project-section">
         <ProjectSection />
-        <PhotoSection/> 
+      </div>
+      <div id="photo-section">
+        <PhotoSection />
+      </div>
    </div>
   );
 };
