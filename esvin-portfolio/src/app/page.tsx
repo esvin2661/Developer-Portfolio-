@@ -22,10 +22,10 @@ const About = () => {
         <HeroSection />
         <GitHubContributions />
         <SkillsPage />
-        <div id="project-section">
+        <div className="project-section">
         <ProjectSection />
       </div>
-      <div id="photo-section">
+      <div className="photo-section">
         <PhotoSection />
       </div>
    </div>
