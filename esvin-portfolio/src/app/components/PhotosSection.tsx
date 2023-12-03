@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   Box,
@@ -20,46 +19,46 @@ import { BsArrowUpRight, BsHeartFill, BsHeart } from 'react-icons/bs';
 //Input inforation to display in each photo card. 
 export default function Photos() {
     
-
+//ONLY UPLOAD PNG IMAGES  
   const PhotoData  = [
     {
       imageUrl:
-        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+        "/Esvin Pic-modified.png",
       heading: 'Esvin Photo 1',
       text:
         'In this post, we will give an overview of what is new in React 18, and what it means for the future.',
     },
     {
       imageUrl:
-        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+      '/Users/esvin/Desktop/Project-Deployment /Developer-Porfolio-/esvin-portfolio/src/app/assets/local-photos/image_6483441.JPG',
       heading: 'Esvin Photo  2',
       text:
         'Photo is not linked to project ',
     },
     {
       imageUrl:
-        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+        '',
       heading: 'Esvin Photo 3',
       text:
         'Yet another project description for the third card.',
     },
     {
       imageUrl:
-        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+        '',
       heading: 'Esvin Photo 1',
       text:
         'In this post, we will give an overview of what is new in React 18, and what it means for the future.',
     },
     {
       imageUrl:
-        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+        '',
       heading: 'Esvin Photo  2',
       text:
         'Another project description goes here.',
     },
     {
       imageUrl:
-        'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
+        '',
       heading: 'Esvin Photo 3',
       text:
         'Yet another project description for the third card.',
@@ -131,4 +130,3 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
     </Box>
   );
 };
-
