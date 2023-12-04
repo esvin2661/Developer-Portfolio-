@@ -112,7 +112,6 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
           alignItems="center"
           justifyContent={'space-between'}
           roundedBottom={'sm'}
-          borderLeft={'1px'}
           cursor="pointer"
         >
         </Flex>
