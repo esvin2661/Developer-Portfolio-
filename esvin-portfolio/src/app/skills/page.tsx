@@ -14,7 +14,7 @@ const SkillsPage = () => {
             alignItems="center"
             mr={4}
             p={2}
-            border="3px solid gray"
+            border="3px solid black"
             borderRadius="md"
           >
             {skill.icon}
