@@ -23,43 +23,43 @@ export default function Photos() {
   const PhotoData  = [
     {
       imageUrl:
-        "/Esvin Pic-modified.png",
-      heading: 'Esvin Photo 1',
+        "/assets/local-photos/castle.png",
+      heading: 'The St. Louis Cathedral',
       text:
         'In this post, we will give an overview of what is new in React 18, and what it means for the future.',
     },
     {
       imageUrl:
-      '/Users/esvin/Desktop/Project-Deployment /Developer-Porfolio-/esvin-portfolio/src/app/assets/local-photos/image_6483441.JPG',
-      heading: 'Esvin Photo  2',
+      "/assets/local-photos/street.png",
+      heading: 'Vampire',
       text:
         'Photo is not linked to project ',
     },
     {
       imageUrl:
-        '',
-      heading: 'Esvin Photo 3',
+      "/assets/local-photos/boston.png",
+      heading: 'Boston',
       text:
-        'Yet another project description for the third card.',
+        'Photo is not linked to project ',
     },
     {
       imageUrl:
-        '',
-      heading: 'Esvin Photo 1',
+      "/assets/local-photos/man.png",
+      heading: 'Serene',
       text:
         'In this post, we will give an overview of what is new in React 18, and what it means for the future.',
     },
     {
       imageUrl:
-        '',
-      heading: 'Esvin Photo  2',
+      "/assets/local-photos/lights.png",
+      heading: 'Butterflied',
       text:
         'Another project description goes here.',
     },
     {
       imageUrl:
-        '',
-      heading: 'Esvin Photo 3',
+      "/assets/local-photos/arc.png",
+      heading: 'Santa Catalina Arch ',
       text:
         'Yet another project description for the third card.',
     },
@@ -71,7 +71,7 @@ export default function Photos() {
           <Flex>
             <VStack spacing={4} align="stretch">
             //Handles the photo text 
-                <Text fontSize={23} textAlign={['center']}>Photos</Text> 
+                <Text fontSize={30} textAlign={['center']}>Photos</Text> 
               <SimpleGrid columns={3} spacing={4}>
                 {PhotoData.map((card, index) => (
                   <Card
@@ -103,16 +103,16 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
     borderColor="black"
     boxShadow={useColorModeValue('3px 6px 0 black', '3px 6px 0 cyan')}
   >
-      <Box h={'200px'} borderBottom={'1px'} borderColor="black">
+      <Box h={'250px'} borderBottom={'1px'} borderColor="black">
         <Img src={imageUrl} roundedTop={'sm'} objectFit="cover" h="full" w="full" alt={'Card Image'} />
       </Box>
       <Box p={4}>
         <Box>
         </Box>
-        <Heading color={'black'} fontSize={'2xl'} noOfLines={1}>
+         <Heading color={'black'} fontSize={'23'} noOfLines={1} textAlign={['center']}>
           {heading}
         </Heading>
-        <Text color={'gray.500'} noOfLines={2}>
+        <Text fontSize={15} color={'gray.500'} noOfLines={2}>
           {text}
         </Text>
       </Box>
@@ -122,7 +122,6 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
           alignItems="center"
           justifyContent={'space-between'}
           roundedBottom={'sm'}
-          borderLeft={'1px'}
           cursor="pointer"
         >
         </Flex>
