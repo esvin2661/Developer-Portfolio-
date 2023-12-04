@@ -24,7 +24,7 @@ export default function Photos() {
     {
       imageUrl:
         "/assets/local-photos/castle.png",
-      heading: 'The St. Louis Cathedral',
+      heading: ' St. Louis Cathedral',
       text:
         'In this post, we will give an overview of what is new in React 18, and what it means for the future.',
     },

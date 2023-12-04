@@ -95,11 +95,11 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
       borderColor="black"
       boxShadow={useColorModeValue('3px 6px 0 black', '3px 6px 0 cyan')}
     >
-      <Box h={'200px'} borderBottom={'1px'} borderColor="black">
+      <Box h={'250px'} borderBottom={'1px'} borderColor="black">
         <Img src={imageUrl} roundedTop={'sm'} objectFit="cover" h="full" w="full" alt={'Card Image'} />
       </Box>
       <Box p={4}>
-        <Heading color={'black'} fontSize={'2xl'} noOfLines={1}>
+        <Heading color={'black'} fontSize={'23'} noOfLines={1} textAlign={['center']}>
           {heading}
         </Heading>
         <Text color={'gray.500'} noOfLines={2}>
