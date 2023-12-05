@@ -94,6 +94,8 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
     border={'1px'}
     borderColor="black"
     boxShadow={useColorModeValue('3px 6px 0 black', '3px 6px 0 cyan')}
+    transition="transform 0.3s"
+    _hover={{ transform: 'scale(1.05)' }} // Scale the card on hover
   >
       <Box h={'250px'} borderBottom={'1px'} borderColor="black">
         <Img src={imageUrl} roundedTop={'sm'} objectFit="cover" h="full" w="full" alt={'Card Image'} />
