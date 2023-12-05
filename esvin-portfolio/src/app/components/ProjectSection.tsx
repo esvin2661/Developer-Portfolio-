@@ -12,10 +12,9 @@ import {
   Center,
   VStack,
 } from '@chakra-ui/react';
-import { BsArrowUpRight } from 'react-icons/bs';
+
 
 const ProjectData = [
-  //ONLY UPLOAD PNG IMAGES 
   {
     imageUrl:
       'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8',
@@ -85,24 +84,27 @@ export default function Projects() {
 function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; text: string }) {
   return (
     <Box
-      w="xs"
-      rounded={'sm'}
-      my={5}
-      mx={[0, 5]}
-      overflow={'hidden'}
-      bg="white"
-      border={'1px'}
-      borderColor="black"
-      boxShadow={useColorModeValue('3px 6px 0 black', '3px 6px 0 cyan')}
-    >
+    minW={{ base: 'full', md: 'xs' }}
+    maxW={{ base: 'full', md: 'xs' }} 
+   rounded={'sm'}
+    my={5}
+    mx={[0, 5]}
+    overflow={'hidden'}
+    bg="white"
+    border={'1px'}
+    borderColor="black"
+    boxShadow={useColorModeValue('3px 6px 0 black', '3px 6px 0 cyan')}
+  >
       <Box h={'250px'} borderBottom={'1px'} borderColor="black">
         <Img src={imageUrl} roundedTop={'sm'} objectFit="cover" h="full" w="full" alt={'Card Image'} />
       </Box>
       <Box p={4}>
-        <Heading color={'black'} fontSize={'23'} noOfLines={1} textAlign={['center']}>
+        <Box>
+        </Box>
+        <Heading color={'black'} fontSize={'xl'} noOfLines={1}>
           {heading}
         </Heading>
-        <Text color={'gray.500'} noOfLines={2}>
+        <Text fontSize={15} color={'gray.500'} noOfLines={2}>
           {text}
         </Text>
       </Box>
