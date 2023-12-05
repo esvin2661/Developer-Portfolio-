@@ -16,13 +16,21 @@ const GitHubContributions = () => {
       <Box>
         <Flex h={500} alignItems={"center"} justifyContent={"Center"}>
           <div className="github-contributions">
-              <Text fontSize={23} textAlign={['center']}>GitHub Contributions</Text>
-              <img
-                src="http://ghchart.rshah.org/esvin2661"
-                alt="Esvin Ruiz 2023 Github chart"
-                style={{ width: "800px", height: "auto" }} 
-              />
-            </div>
+            <Text
+              fontSize={30}
+              textAlign={["center"]}
+              fontWeight="bold"
+              color="blue.500"
+              mb={4}
+            >
+              Github Contribution's
+            </Text>
+            <img
+              src="http://ghchart.rshah.org/esvin2661"
+              alt="Esvin Ruiz 2023 Github chart"
+              style={{ width: "800px", height: "auto" }}
+            />
+          </div>
         </Flex>
       </Box>
     </>

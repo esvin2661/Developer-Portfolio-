@@ -69,8 +69,16 @@ export default function Photos() {
         <Center py={6}>
           <Flex>
             <VStack spacing={4} align="stretch">
-            //Handles the photo text 
-                <Text fontSize={30} textAlign={['center']}>Photos</Text> 
+              //Handles the photo text
+              <Text
+                fontSize={30}
+                textAlign={["center"]}
+                fontWeight="bold"
+                color="blue.500"
+                mb={4}
+              >
+                Photos
+              </Text>
               <SimpleGrid columns={3} spacing={4}>
                 {PhotoData.map((card, index) => (
                   <Card
@@ -85,7 +93,7 @@ export default function Photos() {
           </Flex>
         </Center>
       </div>
-    )
+    );
   }
 
 // This will edit the card 

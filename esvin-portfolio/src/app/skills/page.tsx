@@ -1,13 +1,21 @@
-import { Flex, Box, Text } from '@chakra-ui/react';
-import { skills } from '../lib/constants';
+import { Flex, Box, Text } from "@chakra-ui/react";
+import { skills } from "../lib/constants";
 
-//Figure out how to customize skills icon using Tailwind.css 
+//Figure out how to customize skills icon using Tailwind.css
 const SkillsPage = () => {
   return (
     <div>
-     <Text fontSize={23} textAlign={['center']}>Toolbox</Text>
-     <Flex
-        direction={['column', 'row']} // Stack items vertically on small screens, horizontally on larger screens
+      <Text
+        fontSize={30}
+        textAlign={["center"]}
+        fontWeight="bold"
+        color="blue.500"
+        mb={4}
+      >
+        ToolBox
+      </Text>
+      <Flex
+        direction={["column", "row"]} // Stack items vertically on small screens, horizontally on larger screens
         alignItems="center"
         justifyContent="center"
         flexWrap="wrap" // Allow items to wrap onto the next line on small screens
@@ -20,7 +28,7 @@ const SkillsPage = () => {
             alignItems="center"
             mb={4}
             p={2}
-            //icon width and height 
+            //icon width and height
             width={130}
             height={130}
             border="3px solid black"
