@@ -1,5 +1,5 @@
 import { Flex, Box, Text } from '@chakra-ui/react';
-import { skills } from '../constants';
+import { skills } from '../lib/constants';
 
 //Figure out how to customize skills icon using Tailwind.css 
 const SkillsPage = () => {
@@ -21,8 +21,8 @@ const SkillsPage = () => {
             mb={4}
             p={2}
             //icon width and height 
-            width={150}
-            height={100}
+            width={130}
+            height={130}
             border="3px solid black"
             borderRadius="full"
           >

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import {
   Box,
   Heading,
@@ -12,7 +12,6 @@ import {
   SimpleGrid,
 } from '@chakra-ui/react';
 import Image from "next/image";
-import { BsArrowUpRight, BsHeartFill, BsHeart } from 'react-icons/bs';
 
 
 
@@ -24,7 +23,7 @@ export default function Photos() {
     {
       imageUrl:
         "/assets/local-photos/castle.png",
-      heading: ' St. Louis Cathedral',
+      heading: 'The St. Louis Cathedral',
       text:
         'In this post, we will give an overview of what is new in React 18, and what it means for the future.',
     },
@@ -93,7 +92,8 @@ export default function Photos() {
 function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; text: string }) {
   return (
     <Box
-    w="xs"
+     minW={{ base: 'full', md: 'xs' }}
+     maxW={{ base: 'full', md: 'xs' }} 
     rounded={'sm'}
     my={5}
     mx={[0, 5]}
@@ -103,13 +103,13 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
     borderColor="black"
     boxShadow={useColorModeValue('3px 6px 0 black', '3px 6px 0 cyan')}
   >
-      <Box h={'250px'} borderBottom={'1px'} borderColor="black">
+      <Box h={'320px'} borderBottom={'1px'} borderColor="black">
         <Img src={imageUrl} roundedTop={'sm'} objectFit="cover" h="full" w="full" alt={'Card Image'} />
       </Box>
       <Box p={4}>
         <Box>
         </Box>
-         <Heading color={'black'} fontSize={'23'} noOfLines={1} textAlign={['center']}>
+        <Heading color={'black'} fontSize={'xl'} noOfLines={1}>
           {heading}
         </Heading>
         <Text fontSize={15} color={'gray.500'} noOfLines={2}>
