@@ -5,17 +5,26 @@ import { skills } from '../constants';
 const SkillsPage = () => {
   return (
     <div>
-     <Text fontSize={23} textAlign={['center']}>ToolBox</Text>
-      <Flex alignItems="center" justifyContent="center">
+     <Text fontSize={23} textAlign={['center']}>Toolbox</Text>
+     <Flex
+        direction={['column', 'row']} // Stack items vertically on small screens, horizontally on larger screens
+        alignItems="center"
+        justifyContent="center"
+        flexWrap="wrap" // Allow items to wrap onto the next line on small screens
+      >
         {skills.map((skill, index) => (
           <Box
             key={index}
             display="flex"
+            flexDirection="column"
             alignItems="center"
-            mr={4}
+            mb={4}
             p={2}
+            //icon width and height 
+            width={150}
+            height={100}
             border="3px solid black"
-            borderRadius="md"
+            borderRadius="full"
           >
             {skill.icon}
             <Text ml={2}>{skill.name}</Text>
