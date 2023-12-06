@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from "react";
 import {
   Box,
   Heading,
@@ -10,92 +10,85 @@ import {
   HStack,
   VStack,
   SimpleGrid,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 import Image from "next/image";
 
-
-
-//Input inforation to display in each photo card. 
+//Input inforation to display in each photo card.
 export default function Photos() {
-    
-//ONLY UPLOAD PNG IMAGES  
-  const PhotoData  = [
+  //ONLY UPLOAD PNG IMAGES
+  const PhotoData = [
     {
-      imageUrl:
-        "/assets/local-photos/castle.png",
-      heading: 'The St. Louis Cathedral',
-      text:
-        'In this post, we will give an overview of what is new in React 18, and what it means for the future.',
+      imageUrl: "/assets/local-photos/castle.png",
+      heading: "The St. Louis Cathedral",
+      text: "New Orleans (2022)",
     },
     {
-      imageUrl:
-      "/assets/local-photos/street.png",
-      heading: 'Vampire',
-      text:
-        'Photo is not linked to project ',
+      imageUrl: "/assets/local-photos/arc.png",
+      heading: "Santa Catalina Arch ",
+      text: "Antigua, Guatemala (2023)",
     },
     {
-      imageUrl:
-      "/assets/local-photos/boston.png",
-      heading: 'Boston',
-      text:
-        'Photo is not linked to project ',
+      imageUrl: "/assets/local-photos/boston.png",
+      heading: "Boston",
+      text: "Massachusetts (2023)",
     },
     {
-      imageUrl:
-      "/assets/local-photos/man.png",
-      heading: 'Serene',
-      text:
-        'In this post, we will give an overview of what is new in React 18, and what it means for the future.',
+      imageUrl: "/assets/local-photos/man.png",
+      heading: "Serene",
+      text: "Guatemala City (2023)",
     },
     {
-      imageUrl:
-      "/assets/local-photos/lights.png",
-      heading: 'Butterflied',
-      text:
-        'Another project description goes here.',
+      imageUrl: "/assets/local-photos/lights.png",
+      heading: "Butterflied",
+      text: "Massachusetts (2022)",
     },
     {
-      imageUrl:
-      "/assets/local-photos/arc.png",
-      heading: 'Santa Catalina Arch ',
-      text:
-        'Yet another project description for the third card.',
+      imageUrl: "/assets/local-photos/street.png",
+      heading: "Vampire",
+      text: "New Orleans (2022)",
     },
   ];
 
-    return (
-      <div>
-        <Center py={6}>
-            <VStack spacing={4} align="stretch">
-              //Handles the photo text
-              <Text
-                fontSize={30}
-                textAlign={["center"]}
-                fontWeight="bold"
-                color="blue.500"
-                mb={4}
-              >
-                Photos
-              </Text>
-              <SimpleGrid columns={[1, 2, 3]} spacing={4}>
-                {PhotoData.map((card, index) => (
-                  <Card
-                    key={index}
-                    imageUrl={card.imageUrl}
-                    heading={card.heading}
-                    text={card.text}
-                  />
-                ))}
-              </SimpleGrid>
-            </VStack>
-        </Center>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Center py={6}>
+        <VStack spacing={4} align="stretch">
+          //Handles the photo text
+          <Text
+            fontSize={30}
+            textAlign={["center"]}
+            fontWeight="bold"
+            color="blue.500"
+            mb={4}
+          >
+            Photos
+          </Text>
+          <SimpleGrid columns={[1, 2, 3]} spacing={4}>
+            {PhotoData.map((card, index) => (
+              <Card
+                key={index}
+                imageUrl={card.imageUrl}
+                heading={card.heading}
+                text={card.text}
+              />
+            ))}
+          </SimpleGrid>
+        </VStack>
+      </Center>
+    </div>
+  );
+}
 
-// This will edit the card 
-function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; text: string }) {
+// This will edit the card
+function Card({
+  imageUrl,
+  heading,
+  text, // Updated type to React.ReactNode
+}: {
+  imageUrl: string;
+  heading: string;
+  text: React.ReactNode; // Updated type to React.ReactNode
+}) {
   return (
     <Box
       minW={{ base: "full", md: "xs" }}
@@ -121,12 +114,17 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
           alt={"Card Image"}
         />
       </Box>
-      <Box p={4}>
-        <Box></Box>
-        <Heading color={"black"} fontSize={"xl"} noOfLines={1}>
+      <Box p={4}  display="flex" flexDirection="column" justifyContent="space-between" h="25%">
+        <Heading color={"black"} fontSize={"xl"} noOfLines={1} textAlign="center" >
           {heading}
         </Heading>
-        <Text fontSize={15} color={"gray.500"} noOfLines={2}>
+        <Text
+          fontSize={15}
+          color={"gray.500"}
+          noOfLines={2}
+          whiteSpace="pre-wrap"
+          textAlign="center"
+        >
           {text}
         </Text>
       </Box>
@@ -142,4 +140,4 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
       </HStack>
     </Box>
   );
-};
+}
