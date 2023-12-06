@@ -67,7 +67,6 @@ export default function Photos() {
     return (
       <div>
         <Center py={6}>
-          <Flex>
             <VStack spacing={4} align="stretch">
               //Handles the photo text
               <Text
@@ -79,7 +78,7 @@ export default function Photos() {
               >
                 Photos
               </Text>
-              <SimpleGrid columns={3} spacing={4}>
+              <SimpleGrid columns={[1, 2, 3]} spacing={4}>
                 {PhotoData.map((card, index) => (
                   <Card
                     key={index}
@@ -90,7 +89,6 @@ export default function Photos() {
                 ))}
               </SimpleGrid>
             </VStack>
-          </Flex>
         </Center>
       </div>
     );
@@ -133,6 +131,7 @@ function Card({ imageUrl, heading, text }: { imageUrl: string; heading: string; 
           justifyContent={'space-between'}
           roundedBottom={'sm'}
           cursor="pointer"
+          direction={["column", "row"]}
         >
         </Flex>
       </HStack>

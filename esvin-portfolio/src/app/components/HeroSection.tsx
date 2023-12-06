@@ -56,7 +56,7 @@ export default function HeroSection() {
         <Image
           alt={"Login Image"}
           objectFit={"cover"}
-          src={"/Esvin Pic-modified.png"}
+          src={"/Esvin Ruiz -3233-fotor-20231205231454.png"}
           width={450}
           height={195}
           layout="contain"
