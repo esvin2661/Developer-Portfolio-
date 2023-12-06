@@ -16,21 +16,19 @@ const scrolltosection = (sectionId: string) => {
   }
 };
 
-const About = () => {
+const Home  = () => {
   return (
     <div className="smooth-scrolling">
         <HeroSection />
         <GitHubContributions />
         <SkillsPage />
-        <div className="project-section">
+        <div className="projects" id="projects">
         <ProjectSection />
-      </div>
-      <div className="photo-section">
+        </div>
         <PhotoSection />
-      </div>
    </div>
   );
 };
 
 
-export default About; 
+export default Home; 

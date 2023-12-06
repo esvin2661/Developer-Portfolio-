@@ -25,8 +25,8 @@ interface NavLinkProps {
 import Image from "next/image";
 
 const Links = [
-  { label: "About", href: "/" },
-  { label: 'Projects', href: '#project-section' },
+  { label: "Home ", href: "/" },
+  { label: 'Projects', href: '#projects' },
   { label: 'Photos', href: '#photo-section' },
   { label: "Portfolio", href: "https://www.linkedin.com/in/esv261/" },
   {
