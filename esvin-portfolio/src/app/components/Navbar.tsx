@@ -25,9 +25,9 @@ interface NavLinkProps {
 import Image from "next/image";
 
 const Links = [
-  { label: "Home ", href: "/" },
+  { label: "Home", href: "/" },
   { label: 'Projects', href: '#projects' },
-  { label: 'Photos', href: '#photo-section' },
+  { label: 'Photos', href: '#photos' },
   { label: "Portfolio", href: "https://www.linkedin.com/in/esv261/" },
   {
     label: "Resume",
@@ -101,8 +101,18 @@ export default function Simple() {
 
   return (
     <>
-      <Box>
-        <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
+      <Box className="Navbar-container">
+      <Flex
+          h={20}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          position="fixed"  // Set the position to fixed
+          width="100%"      // Set the width to 100% to cover the entire screen
+          top={0}            // Position it at the top
+          bg="orange"         // Adjust background color as needed
+          zIndex={999}       // Set a high z-index to ensure it's above other elements
+          boxShadow="sm"     // Optional: Add a shadow for better visibility
+        >
           <IconButton
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}

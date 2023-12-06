@@ -16,17 +16,19 @@ const scrolltosection = (sectionId: string) => {
   }
 };
 
-const Home  = () => {
+const Home = () => {
   return (
     <div className="smooth-scrolling">
-        <HeroSection />
-        <GitHubContributions />
-        <SkillsPage />
-        <div className="projects" id="projects">
+      <HeroSection />
+      <GitHubContributions />
+      <SkillsPage />
+      <div className="projects" id="projects">
         <ProjectSection />
-        </div>
+      </div>
+      <div className="photos" id="photos">
         <PhotoSection />
-   </div>
+      </div>
+    </div>
   );
 };
 
