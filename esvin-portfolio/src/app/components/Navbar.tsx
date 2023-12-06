@@ -100,6 +100,11 @@ export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
+  const handleToggle = () => {
+    toggleColorMode(); // Call the toggleColorMode function
+    onClose(); // Close the menu if it's open (optional)
+  };
+
   return (
     <>
       <Box className="Navbar-container">
@@ -110,7 +115,7 @@ export default function Simple() {
           position="fixed"  // Set the position to fixed
           width="100%"      // Set the width to 100% to cover the entire screen
           top={0}            // Position it at the top
-          bg="orange"         // Adjust background color as needed
+          bg="#edfcfe"         // Adjust background color as needed
           zIndex={999}       // Set a high z-index to ensure it's above other elements
           boxShadow="sm"     // Optional: Add a shadow for better visibility
         >
@@ -164,16 +169,17 @@ export default function Simple() {
               align={{ base: "center", md: "center" }}
             >
               <Stack direction={"row"} spacing={6}>
-                <IconButton
+                {/* Work on night mode button later */}
+               {/* <IconButton
                   icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-                  onClick={toggleColorMode}
+                   onClick={handleToggle}
                   aria-label={
                     colorMode === "light"
                       ? "Switch to dark mode"
                       : "Switch to light mode"
                   }
                   variant="ghost"
-                />
+                /> */}
                 <SocialButton
                   label={"LinkedIn"}
                   href={"https://www.linkedin.com/in/esv261/"}

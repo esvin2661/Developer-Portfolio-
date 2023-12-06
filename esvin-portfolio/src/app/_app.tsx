@@ -1,7 +1,8 @@
 import React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import RootLayout from './layout';
 import '../styles.css';
+
 
 interface AppProps {
   Component: React.ComponentType<any>; // Explicitly define the type of Component
@@ -11,6 +12,7 @@ interface AppProps {
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
+       <CSSReset />
       <RootLayout>
         <Component {...pageProps} />
       </RootLayout>

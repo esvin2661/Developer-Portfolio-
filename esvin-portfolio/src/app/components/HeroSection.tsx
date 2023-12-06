@@ -2,6 +2,7 @@
 
 import {
   Button,
+  Center,
   Flex,
   Heading,
   Stack,
@@ -15,10 +16,14 @@ export default function HeroSection() {
     <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
         <Stack spacing={6} w={"full"} maxW={"lg"}>
-          <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+          <Heading
+            fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+            textAlign="center"
+          >
             <Text
               as={"span"}
               position={"relative"}
+              fontFamily="Inter"
               _after={{
                 content: "''",
                 width: "full",
@@ -34,15 +39,20 @@ export default function HeroSection() {
               Esvin Ruiz
             </Text>
             <br />{" "}
-            <Text color={"blue.400"} as={"span"}>
+            <Text fontFamily="Intern" color={"blue.400"} as={"span"}>
               Portfolio
             </Text>{" "}
           </Heading>
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"black "}>
-            Hello! I'm Esvin Ruiz, a computer science student at Wilmington
-            University. I'm passionate about creating opportunities for
-            underrepresented minorities and turning innovative ideas into code.
-            &apos;
+          <Text
+            fontFamily="Nunito Sans"
+            fontSize={{ base: "md", lg: "lg" }}
+            color={"black "}
+            textAlign="center"
+          >
+            I am Esvin Ruiz, a dedicated computer science student enrolled at
+            Wilmington University. My fervor lies in cultivating opportunities
+            for underrepresented minorities and transforming innovative concepts
+            into tangible reality.
           </Text>
         </Stack>
       </Flex>
@@ -61,9 +71,7 @@ export default function HeroSection() {
           height={195}
           layout="contain"
         />
-        
       </Flex>
     </Stack>
-
   );
 }

@@ -3,12 +3,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-;
 
-:root {
-    background-image: linear-gradient(to right top, #e6e4eb, #e5e8ef, #e4ecf2, #e4eff4, #e5f3f4);
+:root{
+background-color: #edfcfe;
 }
-
 .smooth-scrolling {
     scroll-behavior: smooth;
     transition-duration: 1s;
