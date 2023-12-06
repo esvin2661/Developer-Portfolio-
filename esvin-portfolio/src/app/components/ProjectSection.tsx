@@ -64,12 +64,13 @@ export default function Projects() {
           <VStack spacing={4} align="stretch">
             //Handles Project header
             <Text
-              fontSize={30}
-              textAlign={["center"]}
-              fontWeight="bold"
-              color="blue.500"
-              mb={4}
-            >
+            fontFamily="Nunito Sans"
+            fontSize={30}
+            textAlign={["center"]}
+            fontWeight="bold"
+            color="black"
+            mb={5}
+          >
               Projects
             </Text>
             <SimpleGrid columns={[1, 2, 3]} spacing={4}>

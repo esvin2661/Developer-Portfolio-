@@ -6,12 +6,13 @@ const SkillsPage = () => {
   return (
     <div>
       <Text
-        fontSize={30}
-        textAlign={["center"]}
-        fontWeight="bold"
-        color="blue.500"
-        mb={4}
-      >
+              fontFamily="Nunito Sans"
+              fontSize={30}
+              textAlign={["center"]}
+              fontWeight="bold"
+              color="black"
+              mb={8}
+            >
         ToolBox
       </Text>
       <Flex
@@ -26,7 +27,7 @@ const SkillsPage = () => {
             display="flex"
             flexDirection="column"
             alignItems="center"
-            mb={4}
+            mb={8}
             p={2}
             //icon width and height
             width={130}

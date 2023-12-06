@@ -55,10 +55,11 @@ export default function Photos() {
         <VStack spacing={4} align="stretch">
           //Handles the photo text
           <Text
+            fontFamily="Nunito Sans"
             fontSize={30}
             textAlign={["center"]}
             fontWeight="bold"
-            color="blue.500"
+            color="black"
             mb={4}
           >
             Photos

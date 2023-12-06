@@ -17,10 +17,11 @@ const GitHubContributions = () => {
         <Flex h={500} alignItems={"center"} justifyContent={"Center"}>
           <div className="github-contributions">
             <Text
+              fontFamily="Nunito Sans"
               fontSize={30}
               textAlign={["center"]}
               fontWeight="bold"
-              color="blue.500"
+              color="black"
               mb={4}
             >
               Github Contribution's
