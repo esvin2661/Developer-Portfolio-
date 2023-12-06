@@ -24,11 +24,12 @@ interface NavLinkProps {
 }
 import Image from "next/image";
 
+// Add Portfolio section later
 const Links = [
   { label: "Home", href: "/" },
   { label: 'Projects', href: '#projects' },
   { label: 'Photos', href: '#photos' },
-  { label: "Portfolio", href: "https://www.linkedin.com/in/esv261/" },
+  /* { label: "Portfolio", href: " " },*/
   {
     label: "Resume",
     href: "https://blush-romola-69.tiiny.site/",
