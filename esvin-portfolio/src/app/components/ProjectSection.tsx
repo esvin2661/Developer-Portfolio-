@@ -12,42 +12,47 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-const ProjectData = [
+const ProjectData: {
+  imageUrl: string;
+  heading: string;
+  text: string;
+  githubLink: string;
+}[] = [
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8",
-    heading: "Esvin Project 1",
+    imageUrl: "/assets/projects-img/find.png",
+    heading: "Opportunitie-Finder",
     text: "In this post, we will give an overview of what is new in React 18, and what it means for the future.",
+    githubLink: "https://github.com/your-username/your-repo",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8",
-    heading: "Esvin Project 2",
+    imageUrl: "/assets/Projects-img/QR_code_.png",
+    heading: "QR-Code-Encoder",
     text: "Another project description goes here.",
+    githubLink: "https://github.com/your-username/your-repo",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8",
-    heading: "Esvin Project 3",
+    imageUrl: "/assets/Projects-img/Books.png",
+    heading: "Book-Rating App",
     text: "Yet another project description for the third card.",
+    githubLink: "https://github.com/your-username/your-repo",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8",
-    heading: "Esvin Project 3",
+    imageUrl: "/assets/Projects-img/JSON.png/",
+    heading: "JSON-to-CSV Converter",
     text: "Yet another project description for the third card.",
+    githubLink: "https://github.com/your-username/your-repo",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8",
-    heading: "Esvin Project 3",
+    imageUrl: "/assets/Projects-img/Watch.png",
+    heading: "Stopwatch",
     text: "Yet another project description for the third card.",
+    githubLink: "https://github.com/your-username/your-repo",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=8",
-    heading: "Esvin Project 3",
+    imageUrl: "/assets/Projects-img/Chess.png",
+    heading: "Hikaru-Chess-Analysis",
     text: "Yet another project description for the third card.",
+    githubLink: "https://github.com/your-username/your-repo",
   },
 ];
 
@@ -56,7 +61,6 @@ export default function Projects() {
   return (
     <div>
       <Center py={6}>
-        <Flex>
           <VStack spacing={4} align="stretch">
             //Handles Project header
             <Text
@@ -68,18 +72,18 @@ export default function Projects() {
             >
               Projects
             </Text>
-            <SimpleGrid columns={3} spacing={4}>
+            <SimpleGrid columns={[1, 2, 3]} spacing={4}>
               {ProjectData.map((card, index) => (
                 <Card
                   key={index}
                   imageUrl={card.imageUrl}
                   heading={card.heading}
                   text={card.text}
+                  githubLink={card.githubLink}
                 />
               ))}
             </SimpleGrid>
           </VStack>
-        </Flex>
       </Center>
     </div>
   );
@@ -90,10 +94,12 @@ function Card({
   imageUrl,
   heading,
   text,
+  githubLink
 }: {
   imageUrl: string;
   heading: string;
   text: string;
+  githubLink: string;
 }) {
   return (
     <Box
@@ -110,8 +116,10 @@ function Card({
       transition="transform 0.3s"
       _hover={{ transform: "scale(1.05)" }} // Scale the card on hover
     >
-      <Box h={"250px"} borderBottom={"1px"} borderColor="black">
-        <Img
+       <Box h={'320px'} borderBottom={'1px'} borderColor="black">
+       
+       <a href={githubLink} target="_blank" rel="noopener noreferrer">
+         <Img
           src={imageUrl}
           roundedTop={"sm"}
           objectFit="cover"
@@ -119,6 +127,7 @@ function Card({
           w="full"
           alt={"Card Image"}
         />
+        </a>
       </Box>
       <Box p={4}>
         <Box></Box>
