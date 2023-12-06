@@ -116,25 +116,29 @@ function Card({
       transition="transform 0.3s"
       _hover={{ transform: "scale(1.05)" }} // Scale the card on hover
     >
-       <Box h={'320px'} borderBottom={'1px'} borderColor="black">
-       
-       <a href={githubLink} target="_blank" rel="noopener noreferrer">
-         <Img
-          src={imageUrl}
-          roundedTop={"sm"}
-          objectFit="cover"
-          h="full"
-          w="full"
-          alt={"Card Image"}
-        />
+      <Box h={"320px"} borderBottom={"1px"} borderColor="black">
+        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+          <Img
+            src={imageUrl}
+            roundedTop={"sm"}
+            objectFit="cover"
+            h="full"
+            w="full"
+            alt={"Card Image"}
+          />
         </a>
       </Box>
-      <Box p={4}>
-        <Box></Box>
-        <Heading color={"black"} fontSize={"xl"} noOfLines={1}>
+      <Box p={4}  display="flex" flexDirection="column" justifyContent="space-between" h="25%">
+        <Heading color={"black"} fontSize={"xl"} noOfLines={1} textAlign="center" >
           {heading}
         </Heading>
-        <Text fontSize={15} color={"gray.500"} noOfLines={2}>
+        <Text
+          fontSize={15}
+          color={"gray.500"}
+          noOfLines={2}
+          whiteSpace="pre-wrap"
+          textAlign="center"
+        >
           {text}
         </Text>
       </Box>
