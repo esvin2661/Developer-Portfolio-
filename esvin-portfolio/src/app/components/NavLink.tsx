@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import NextLink from 'next/link';
 import { Box, useColorModeValue } from '@chakra-ui/react';
