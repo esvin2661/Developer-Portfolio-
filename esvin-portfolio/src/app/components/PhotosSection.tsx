@@ -62,7 +62,7 @@ export default function Photos() {
             color="black"
             mb={4}
           >
-            Photos
+            Photo Gallery 
           </Text>
           <SimpleGrid columns={[1, 2, 3]} spacing={4}>
             {PhotoData.map((card, index) => (
