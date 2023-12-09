@@ -28,6 +28,7 @@ const SkillsPage = () => {
             flexDirection="column"
             alignItems="center"
             mb={8}
+            mr={4}
             p={2}
             //icon width and height
             width={130}
