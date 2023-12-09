@@ -6,16 +6,17 @@ const SkillsPage = () => {
   return (
     <div>
       <Text
-              fontFamily="Nunito Sans"
-              fontSize={30}
-              textAlign={["center"]}
-              fontWeight="bold"
-              color="black"
-              mb={8}
-            >
-        ToolBox
+        fontFamily="Nunito Sans"
+        fontSize={30}
+        textAlign={["center"]}
+        fontWeight="bold"
+        color="black"
+        mb={8}
+      >
+        TechStack
       </Text>
       <Flex
+        mb={10}
         direction={["column", "row"]} // Stack items vertically on small screens, horizontally on larger screens
         alignItems="center"
         justifyContent="center"
@@ -28,10 +29,11 @@ const SkillsPage = () => {
             flexDirection="column"
             alignItems="center"
             mb={8}
+            mr={4}
             p={2}
             //icon width and height
-            width={130}
-            height={130}
+            width={140}
+            height={140}
             border="3px solid black"
             borderRadius="full"
           >
