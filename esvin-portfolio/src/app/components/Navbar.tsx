@@ -115,7 +115,7 @@ export default function Simple() {
           position="fixed"  // Set the position to fixed
           width="100%"      // Set the width to 100% to cover the entire screen
           top={0}            // Position it at the top
-          bg="#82a9d8"         // Adjust background color as needed
+          bg="#83b7ec"         // Adjust background color as needed
           zIndex={999}       // Set a high z-index to ensure it's above other elements
           boxShadow="sm"     // Optional: Add a shadow for better visibility
         >

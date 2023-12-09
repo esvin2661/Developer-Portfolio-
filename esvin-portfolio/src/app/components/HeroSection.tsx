@@ -45,7 +45,7 @@ export default function HeroSection() {
           </Heading>
           <Text
             fontFamily="Nunito Sans"
-            fontSize={{ base: "md", lg: "lg" }}
+            fontSize={{ base: "md", lg: "xl" }}
             color={"black "}
             textAlign="center"
           >
