@@ -1,11 +1,21 @@
-import { Flex, Stack, Heading, Text, useBreakpointValue, Image } from "@chakra-ui/react";
+import {
+  Flex,
+  Stack,
+  Heading,
+  Text,
+  useBreakpointValue,
+  Image,
+} from "@chakra-ui/react";
 
 export default function HeroSection() {
   return (
     <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
         <Stack spacing={6} w={"full"} maxW={"lg"}>
-          <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} textAlign="center">
+          <Heading
+            fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+            textAlign="center"
+          >
             <Text
               as={"span"}
               position={"relative"}
@@ -49,15 +59,17 @@ export default function HeroSection() {
         alignItems="center"
         justifyContent="center"
       >
-     <Image
+        <Image
           alt={"Esvin Ruiz Image"}
           objectFit={"cover"}
           src={"/Esvin Ruiz -3233-fotor-20231205231454.png"}
           width="70%"
           height="auto"
-          transition="transform 0.3s"
-          _hover={{ transform: "scale(2)" }} // Scale the card on hover
-          />
+          transition="transform 0.9s"
+          _hover={{
+            transform: "scale(1.25) rotate(360deg)",
+          }}
+        />
       </Flex>
     </Stack>
   );
