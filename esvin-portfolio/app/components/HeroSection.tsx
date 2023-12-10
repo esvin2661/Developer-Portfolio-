@@ -1,15 +1,12 @@
 "use client";
-
 import {
-  Button,
-  Center,
   Flex,
-  Heading,
   Stack,
+  Heading,
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import Image from "next/image";
+import Spinning  from "./SpinningImage";
 
 export default function HeroSection() {
   return (
@@ -63,14 +60,7 @@ export default function HeroSection() {
         alignItems="center"
         justifyContent="center"
       >
-        <Image
-          alt={"Login Image"}
-          objectFit={"cover"}
-          src={"/Esvin Ruiz -3233-fotor-20231205231454.png"}
-          width={450}
-          height={195}
-          layout="contain"
-        />
+        <Spinning/> {/* Use the SpinningImage component */}
       </Flex>
     </Stack>
   );
