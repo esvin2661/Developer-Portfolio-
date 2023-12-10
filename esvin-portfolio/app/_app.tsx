@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   if (!router.isReady) {
     console.log('Router is not ready!');
-    router.push("/"); // Fix the routing check using isReady
+    router.push("/");
   }
 
   return (
