@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 import {
   Flex,
   Stack,
@@ -6,6 +8,7 @@ import {
   useBreakpointValue,
   Image,
 } from "@chakra-ui/react";
+
 
 export default function HeroSection() {
   return (
