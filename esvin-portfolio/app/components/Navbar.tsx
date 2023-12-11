@@ -199,6 +199,35 @@ export default function Simple() {
                 >
                   <FaGithub />
                 </SocialButton>
+                <SocialButton
+    label="Vercel"
+    href="https://vercel.com/"
+  >
+    {/* Your Vercel icon here */}
+    <svg
+  className="with-icon_icon__MHUeb"
+  data-testid="geist-icon"
+  fill="currentColor" // Change 'none' to 'currentColor' to fill the icon with the current text color
+  height="24"
+  shapeRendering="geometricPrecision"
+  stroke="currentColor"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  strokeWidth="1.5"
+  viewBox="0 0 24 24"
+  width="24"
+  style={{ color: 'var(--geist-foreground)', width: '24px', height: '24px' }}
+>
+  <path
+    fillRule="evenodd"
+    clipRule="evenodd"
+    d="M12 2L2 19.7778H22L12 2Z"
+    fill="currentColor" // Add 'fill' attribute to set the fill color
+    stroke="currentColor"
+    strokeWidth="1.5"
+  />
+</svg>
+    </SocialButton>
               </Stack>
             </Container>
           </Box>

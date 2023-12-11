@@ -1,12 +1,11 @@
-"use client";
 import {
   Flex,
   Stack,
   Heading,
   Text,
   useBreakpointValue,
+  Image,
 } from "@chakra-ui/react";
-import Spinning  from "./SpinningImage";
 
 export default function HeroSection() {
   return (
@@ -24,7 +23,7 @@ export default function HeroSection() {
               _after={{
                 content: "''",
                 width: "full",
-                height: useBreakpointValue({ base: "15%", md: "25%%" }),
+                height: useBreakpointValue({ base: "15%", md: "25%" }),
                 position: "absolute",
                 bottom: 1,
                 left: 0,
@@ -60,7 +59,17 @@ export default function HeroSection() {
         alignItems="center"
         justifyContent="center"
       >
-        <Spinning/> {/* Use the SpinningImage component */}
+        <Image
+          alt={"Esvin Ruiz Image"}
+          objectFit={"cover"}
+          src={"/Esvin Ruiz -3233-fotor-20231205231454.png"}
+          width="70%"
+          height="auto"
+          transition="transform 1.6s"
+          _hover={{
+            transform: "scale(1.25) rotate(360deg)",
+          }}
+        />
       </Flex>
     </Stack>
   );
