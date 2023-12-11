@@ -65,7 +65,7 @@ export default function HeroSection() {
           src={"/Esvin Ruiz -3233-fotor-20231205231454.png"}
           width="70%"
           height="auto"
-          transition="transform 2s"
+          transition="transform 1.6s"
           _hover={{
             transform: "scale(1.25) rotate(360deg)",
           }}

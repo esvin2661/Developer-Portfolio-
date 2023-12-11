@@ -36,7 +36,8 @@ const SkillsPage = () => {
             height={140}
             border="3px solid black"
             borderRadius="full"
-          >
+            _hover={{
+              transform: "scale(1.25)",}}>
             {skill.icon}
             <Text ml={2}>{skill.name}</Text>
           </Box>

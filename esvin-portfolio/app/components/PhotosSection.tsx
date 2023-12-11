@@ -40,12 +40,12 @@ export default function Photos() {
     },
     {
       imageUrl: "/assets/local-photos/lights.png",
-      heading: "Butterflied",
+      heading: "Butterfree",
       text: "Massachusetts (2022)",
     },
     {
       imageUrl: "/assets/local-photos/street.png",
-      heading: "Vampire",
+      heading: "Vampire Diaries",
       text: "New Orleans (2022)",
     },
   ];
