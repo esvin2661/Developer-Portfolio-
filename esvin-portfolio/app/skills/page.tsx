@@ -1,7 +1,7 @@
 import { Flex, Box, Text } from "@chakra-ui/react";
 import { skills } from "../lib/constants";
 
-//Figure out how to customize skills icon using Tailwind.css
+
 const SkillsPage = () => {
   return (
     <div>

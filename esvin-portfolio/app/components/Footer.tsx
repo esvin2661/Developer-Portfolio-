@@ -12,17 +12,6 @@ import { Link } from '@chakra-ui/react';
 import { FaGithub, FaYoutube,FaLinkedin } from 'react-icons/fa'
 import { ReactNode } from 'react'
 
-// add Logo path to this variable
-const Logo = (props: any) => {
-  return (
-    <svg height={32} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <path
-      />
-      <path
-      />
-    </svg>
-  )
-}
 
 const SocialButton = ({
   children,
@@ -68,7 +57,6 @@ export default function Footer() {
         justify={"center"}
         align={"center"}
       >
-        <Logo />
         <Stack direction={"row"} spacing={6}>
           <Link href={"/"}>Home</Link>
           <Link href={"#projects"}>Projects</Link>
