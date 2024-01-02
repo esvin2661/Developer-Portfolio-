@@ -16,7 +16,7 @@ export default function ErrorComponent({ error = {}, reset }: ErrorComponentProp
   return (
     <div>
       <h2>Something went wrong!</h2>
-      <button onClick={reset}>Try again</button>
+      <button onClick={reset}>Try again!</button>
       {digest && <p>Digest: {digest}</p>}
     </div>
   );

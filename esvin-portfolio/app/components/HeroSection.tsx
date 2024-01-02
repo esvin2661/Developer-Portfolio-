@@ -48,7 +48,7 @@ export default function HeroSection() {
             color={"black "}
             textAlign="center"
           >
-            I am Esvin Ruiz, a dedicated computer science student enrolled at
+           Hi - I am Esvin Ruiz, a dedicated computer science student enrolled at
             Wilmington University. My fervor lies in cultivating opportunities
             for underrepresented minorities and transforming innovative concepts
             into tangible reality.
