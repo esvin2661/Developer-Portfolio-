@@ -1,13 +1,10 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import { AppProps } from 'next/app';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 import RootLayout from './layout';
 import '../styles.css';
-
-interface AppProps {
-  Component: React.ComponentType<any>; // Explicitly define the type of Component
-  pageProps: any; // Adjust this type according to your actual pageProps type
-}
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -19,6 +16,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ChakraProvider>
+      <Head>
+        <title>Your Page Title</title>
+        {/* Add other head elements here */}
+      </Head>
       <CSSReset />
       <RootLayout>
         <Component {...pageProps} />
