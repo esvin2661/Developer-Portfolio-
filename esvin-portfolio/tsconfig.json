@@ -1,27 +1,44 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "esnext", // Changed to esnext for better compatibility with modern JavaScript/TypeScript features
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", // Changed to node for a more standard resolution strategy
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
       {
+        "name": "typescript-plugin-css-modules" // Assuming you need this for CSS modules
+      },
+      {
         "name": "next"
       }
     ],
+    "baseUrl": ".", // Added baseUrl for better resolution of module paths
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "src/*"
+      ] // Assuming your source code is in a "src" directory
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
